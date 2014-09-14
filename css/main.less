@@ -1,0 +1,113 @@
+/*	==========================================================================
+	mixins LESS
+	========================================================================== */
+
+@import url('mixins.less');
+
+/*	==========================================================================
+	adjust my LESS
+	========================================================================== */
+
+@body_font: 'Arial' sans-serif;
+
+@header: 150px;
+
+@containers: 350px;
+
+.shadowForBox (@unit: 0px 3px 6px 0px rgba(0,0,0,0.2);) {
+	-webkit-box-shadow: @unit;
+	-moz-box-shadow: @unit;
+	box-shadow: @unit;
+}
+
+/*	==========================================================================
+	common elements
+	========================================================================== */
+html * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font: 14px/1.41 @body_font;
+}
+html {
+	width:100%;
+	height:100%;
+	font-size: 100.01%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 14px/1.41 @body_font;
+    -webkit-font-smoothing: antialiased;
+	height:100%;
+	margin: 0;
+	padding: 0;
+	width:100%;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	li {
+		padding: 0;
+		margin: 0;
+		list-style: none outside none;
+	}
+}
+p{
+	padding: 0;
+	margin: 0;
+}
+/*	==========================================================================
+	main LESS
+	========================================================================== */
+div.header {
+	background: #eee;
+	height: @header;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+	.shadowForBox
+}
+div.container {
+	padding-top: @header;
+	position: relative
+}
+div.font {
+	background: #faebeb;
+	float: left;
+	width: 50%;
+	min-height: @containers;
+}
+div.bg {
+	background: #e0ecf7;
+	float: right;
+	width: 50%;
+	min-height: @containers;
+}
+div.border {
+	background: #363636;
+	float: left;
+	width: 50%;
+	min-height: @containers;
+}
+
+
+/*	==========================================================================
+	fontface
+	========================================================================== */
+
+@font-face {font-family: Bold;			src: url('fonts/MyriadPro-Bold.otf');}
+@font-face {font-family: BoldCond;		src: url('fonts/MyriadPro-BoldCond.otf');}
+@font-face {font-family: BoldCondIt;	src: url('fonts/MyriadPro-BoldCondIt.otf');}
+@font-face {font-family: BoldIt;		src: url('fonts/MyriadPro-BoldIt.otf');}
+@font-face {font-family: Cond;			src: url('fonts/MyriadPro-Cond.otf');}
+@font-face {font-family: CondIt;		src: url('fonts/MyriadPro-CondIt.otf');}
+@font-face {font-family: It;			src: url('fonts/MyriadPro-It.otf');}
+@font-face {font-family: Regular;		src: url('fonts/MyriadPro-Regular.otf');}
+@font-face {font-family: Semibold;		src: url('fonts/MyriadPro-Semibold.otf');}
+@font-face {font-family: SemiboldIt;	src: url('fonts/MyriadPro-SemiboldIt.otf');}

@@ -10,16 +10,52 @@
 
 @body_font: 'Arial' sans-serif;
 
-@header: 150px;
+@header: 80px;
+@containers: 300px;
+@bg__section: 0.24*@containers;
 
-@containers: 350px;
+//@media 
 
-.shadowForBox (@unit: 0px 3px 6px 0px rgba(0,0,0,0.2);) {
-	-webkit-box-shadow: @unit;
-	-moz-box-shadow: @unit;
-	box-shadow: @unit;
+.shadowForBox (@unitBox: 0px 3px 6px 0px rgba(0,0,0,0.5);) {
+	-webkit-box-shadow: @unitBox;
+	-moz-box-shadow: @unitBox;
+	box-shadow: @unitBox;
 }
-
+.insetShadowForBox (@unitInset: inset 1px 1px 3px 2px rgba(0,0,0,0.5);) {
+	-webkit-box-shadow: @unitInset;
+	-moz-box-shadow: @unitInset;
+	box-shadow: @unitInset;
+}
+// adjust backgorund, border blocks
+.title {
+	color: #a00;
+	font: bold 2em/1.5 @body_font;
+	text-align: center;
+}
+.bginnerdivprop {
+	height: @bg__section;
+	padding: 0 0 0 0.1*@bg__section;
+	position: relative;
+	&:hover {
+		background: rgba(255, 255, 255, 0.3);
+	}
+}
+.list {
+	display: block;
+	width: auto;
+	.clearfix;
+}
+.bg-inner-p-prop {
+	font: bold 2em @body_font;
+	line-height: @bg__section;
+	width: 2*@bg__section;
+}
+.sliderhorisontal {
+	background: #aaa;
+	display: block;
+	height: 0.2*@bg__section;
+	width: 3.2*@bg__section;
+}
 /*	==========================================================================
 	common elements
 	========================================================================== */
@@ -27,7 +63,6 @@ html * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font: 14px/1.41 @body_font;
 }
 html {
 	width:100%;
@@ -35,8 +70,10 @@ html {
 	font-size: 100.01%;
 	margin: 0;
 	padding: 0;
+	font: 14px/1.41 @body_font;
 }
 body {
+	background: url(../img/mooning.png);
 	font: 14px/1.41 @body_font;
     -webkit-font-smoothing: antialiased;
 	height:100%;
@@ -65,38 +102,283 @@ p{
 	main LESS
 	========================================================================== */
 div.header {
-	background: #eee;
-	height: @header;
+	background: url(../img/subtle_grunge.png);
+	min-height: @header;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 5;
 	.shadowForBox
 }
+
+
 div.container {
 	padding-top: @header;
-	position: relative
+	position: relative;
+	.clearfix;
 }
+div.wrapper {
+	border-bottom: solid 3px #666;
+	float: left;
+	width: 100%;
+}
+div.wrapper__left {
+	border-right: solid 3px #666;
+	float: left;
+	position: relative;
+	width: 50%;
+}
+div.wrapper__right {
+	float: right;
+	position: relative;
+	width: 50%;
+}
+
 div.font {
-	background: #faebeb;
+	margin: 0 auto;
+	min-height: @containers;
+	width: 5.4*@bg__section;
+	.clearfix;
+	
+	div.font__title {
+		.title;
+		line-height: @bg__section;
+	}
+	div.font__color {
+		.bginnerdivprop;
+		
+		ul.fontcolor__list {
+			.list;
+			
+			li.fontcolor__item {
+				float: left;
+				
+				p.fontcolor__item-name {
+					.bg-inner-p-prop;			}
+				
+				a.fontcolor__link-select {
+					background: #1c1c1c;
+					display: block;
+					height: @bg__section;
+					width: @bg__section;
+				}
+				a.fontcolor__link-result {
+					background: #eee;
+					display: block;
+					height: @bg__section;
+					width: 2.3*@bg__section;
+				}
+			}
+		}
+	}
+	div.font__size {
+		.bginnerdivprop;
+		
+		ul.fontsize__list {
+			.list;
+			
+			li.fontsize__item {
+				display: inline-block;
+				
+				p.fontsize__item-name {
+					.bg-inner-p-prop;
+				}
+				a.fontsize__link-select {
+					.sliderhorisontal;
+				}
+			}
+		}
+	}
+	div.font__family {
+		.bginnerdivprop;
+		
+		ul.fontfamily__list {
+			.list;
+			
+			li.fontfamily__item {
+				display: inline-block;
+				
+				p.fontfamily__item-name {
+					.bg-inner-p-prop;
+				}
+				a.fontfamily__link-select {
+					.sliderhorisontal;
+				}
+			}
+		}
+	}
+}
+
+div.bg {
+	margin: 0 auto;
+	min-height: @containers;
+	width: 5.4*@bg__section;
+	.clearfix;
+	
+	div.bg__title {
+		.title;
+		line-height: @bg__section;
+	}
+	div.bg__color {
+		.bginnerdivprop;
+		
+		ul.color__list {
+			.list;
+			
+			li.color__item {
+				float: left;
+				
+				p.color__item-name {
+					.bg-inner-p-prop;			}
+				
+				a.color__link-select {
+					background: #43a0d1;
+					display: block;
+					height: @bg__section;
+					width: @bg__section;
+				}
+				a.color__link-result {
+					background: #eee;
+					display: block;
+					height: @bg__section;
+					width: 2.3*@bg__section;
+				}
+			}
+		}
+	}
+	div.bg__width {
+		.bginnerdivprop;
+		
+		ul.width__list {
+			.list;
+			
+			li.width__item {
+				display: inline-block;
+				
+				p.width__item-name {
+					.bg-inner-p-prop;
+				}
+				a.width__link-select {
+					.sliderhorisontal;
+				}
+			}
+		}
+	}
+	div.bg__height {
+		.bginnerdivprop;
+		
+		ul.height__list {
+			.list;
+			
+			li.height__item {
+				display: inline-block;
+				
+				p.height__item-name {
+					.bg-inner-p-prop;
+				}
+				a.height__link-select {
+					.sliderhorisontal;
+				}
+			}
+		}
+	}
+}
+
+div.border {
+	margin: 0 auto;
+	min-height: @containers;
+	width: 5.4*@bg__section;
+	.clearfix;
+	
+	div.border__title {
+		.title;
+		line-height: @bg__section;
+	}
+	div.border__color {
+		.bginnerdivprop;
+		
+		ul.color__list {
+			.list;
+			
+			li.color__item {
+				float: left;
+				
+				p.color__item-name {
+					.bg-inner-p-prop;			}
+				
+				a.color__link-select {
+					background: #af2b4f;
+					display: block;
+					height: @bg__section;
+					width: @bg__section;
+				}
+				a.color__link-result {
+					background: #eee;
+					display: block;
+					height: @bg__section;
+					width: 2.3*@bg__section;
+				}
+			}
+		}
+	}
+	div.border__size {
+		.bginnerdivprop;
+		
+		ul.size__list {
+			.list;
+			
+			li.size__item {
+				display: inline-block;
+				
+				p.size__item-name {
+					.bg-inner-p-prop;
+				}
+				a.size__link-select {
+					.sliderhorisontal;
+				}
+			}
+		}
+	}
+	div.border__radius {
+		.bginnerdivprop;
+		
+		ul.radius__list {
+			.list;
+			
+			li.radius__item {
+				display: inline-block;
+				
+				p.radius__item-name {
+					.bg-inner-p-prop;
+				}
+				a.radius__link-select {
+					.sliderhorisontal;
+				}
+			}
+		}
+	}
+}
+
+
+div.code {
+	background: #222;
 	float: left;
 	width: 50%;
-	min-height: @containers;
+	min-height: @containers*1.5;
+	.clearfix;
 }
-div.bg {
-	background: #e0ecf7;
+div.send {
+	background: #d37f7f;
 	float: right;
 	width: 50%;
-	min-height: @containers;
-}
-div.border {
-	background: #363636;
-	float: left;
-	width: 50%;
-	min-height: @containers;
+	min-height: @containers*1.5;
+	.clearfix;
 }
 
-
+.text {
+	color: #444;
+	text-shadow: 1px 1px 0 #eee;
+}
 /*	==========================================================================
 	fontface
 	========================================================================== */

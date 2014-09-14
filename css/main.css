@@ -24,6 +24,44 @@
 /*	==========================================================================
 	adjust my LESS
 	========================================================================== */
+.title {
+  color: #a00;
+  font: bold 2em/1.5 'Arial' sans-serif;
+  text-align: center;
+}
+.bginnerdivprop {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+.bginnerdivprop:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.list:before,
+.list:after {
+  content: "";
+  display: table;
+}
+.list:after {
+  clear: both;
+}
+.bg-inner-p-prop {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+.sliderhorisontal {
+  background: #aaa;
+  display: block;
+  height: 14.4px;
+  width: 230.4px;
+}
 /*	==========================================================================
 	common elements
 	========================================================================== */
@@ -31,7 +69,6 @@ html * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px/1.41 'Arial' sans-serif;
 }
 html {
   width: 100%;
@@ -39,8 +76,10 @@ html {
   font-size: 100.01%;
   margin: 0;
   padding: 0;
+  font: 14px/1.41 'Arial' sans-serif;
 }
 body {
+  background: url(../img/mooning.png);
   font: 14px/1.41 'Arial' sans-serif;
   -webkit-font-smoothing: antialiased;
   height: 100%;
@@ -69,37 +108,486 @@ p {
 	main LESS
 	========================================================================== */
 div.header {
-  background: #eee;
-  height: 150px;
+  background: url(../img/subtle_grunge.png);
+  min-height: 80px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 5;
-  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
 }
 div.container {
-  padding-top: 150px;
+  padding-top: 80px;
   position: relative;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.container:before,
+div.container:after {
+  content: "";
+  display: table;
+}
+div.container:after {
+  clear: both;
+}
+div.wrapper {
+  border-bottom: solid 3px #666;
+  float: left;
+  width: 100%;
+}
+div.wrapper__left {
+  border-right: solid 3px #666;
+  float: left;
+  position: relative;
+  width: 50%;
+}
+div.wrapper__right {
+  float: right;
+  position: relative;
+  width: 50%;
 }
 div.font {
-  background: #faebeb;
+  margin: 0 auto;
+  min-height: 300px;
+  width: 388.8px;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.font:before,
+div.font:after {
+  content: "";
+  display: table;
+}
+div.font:after {
+  clear: both;
+}
+div.font div.font__title {
+  color: #a00;
+  font: bold 2em/1.5 'Arial' sans-serif;
+  text-align: center;
+  line-height: 72px;
+}
+div.font div.font__color {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.font div.font__color:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.font div.font__color ul.fontcolor__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.font div.font__color ul.fontcolor__list:before,
+div.font div.font__color ul.fontcolor__list:after {
+  content: "";
+  display: table;
+}
+div.font div.font__color ul.fontcolor__list:after {
+  clear: both;
+}
+div.font div.font__color ul.fontcolor__list li.fontcolor__item {
   float: left;
-  width: 50%;
-  min-height: 350px;
+}
+div.font div.font__color ul.fontcolor__list li.fontcolor__item p.fontcolor__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.font div.font__color ul.fontcolor__list li.fontcolor__item a.fontcolor__link-select {
+  background: #1c1c1c;
+  display: block;
+  height: 72px;
+  width: 72px;
+}
+div.font div.font__color ul.fontcolor__list li.fontcolor__item a.fontcolor__link-result {
+  background: #eee;
+  display: block;
+  height: 72px;
+  width: 165.6px;
+}
+div.font div.font__size {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.font div.font__size:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.font div.font__size ul.fontsize__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.font div.font__size ul.fontsize__list:before,
+div.font div.font__size ul.fontsize__list:after {
+  content: "";
+  display: table;
+}
+div.font div.font__size ul.fontsize__list:after {
+  clear: both;
+}
+div.font div.font__size ul.fontsize__list li.fontsize__item {
+  display: inline-block;
+}
+div.font div.font__size ul.fontsize__list li.fontsize__item p.fontsize__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.font div.font__size ul.fontsize__list li.fontsize__item a.fontsize__link-select {
+  background: #aaa;
+  display: block;
+  height: 14.4px;
+  width: 230.4px;
+}
+div.font div.font__family {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.font div.font__family:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.font div.font__family ul.fontfamily__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.font div.font__family ul.fontfamily__list:before,
+div.font div.font__family ul.fontfamily__list:after {
+  content: "";
+  display: table;
+}
+div.font div.font__family ul.fontfamily__list:after {
+  clear: both;
+}
+div.font div.font__family ul.fontfamily__list li.fontfamily__item {
+  display: inline-block;
+}
+div.font div.font__family ul.fontfamily__list li.fontfamily__item p.fontfamily__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.font div.font__family ul.fontfamily__list li.fontfamily__item a.fontfamily__link-select {
+  background: #aaa;
+  display: block;
+  height: 14.4px;
+  width: 230.4px;
 }
 div.bg {
-  background: #e0ecf7;
-  float: right;
-  width: 50%;
-  min-height: 350px;
+  margin: 0 auto;
+  min-height: 300px;
+  width: 388.8px;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.bg:before,
+div.bg:after {
+  content: "";
+  display: table;
+}
+div.bg:after {
+  clear: both;
+}
+div.bg div.bg__title {
+  color: #a00;
+  font: bold 2em/1.5 'Arial' sans-serif;
+  text-align: center;
+  line-height: 72px;
+}
+div.bg div.bg__color {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.bg div.bg__color:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.bg div.bg__color ul.color__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.bg div.bg__color ul.color__list:before,
+div.bg div.bg__color ul.color__list:after {
+  content: "";
+  display: table;
+}
+div.bg div.bg__color ul.color__list:after {
+  clear: both;
+}
+div.bg div.bg__color ul.color__list li.color__item {
+  float: left;
+}
+div.bg div.bg__color ul.color__list li.color__item p.color__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.bg div.bg__color ul.color__list li.color__item a.color__link-select {
+  background: #43a0d1;
+  display: block;
+  height: 72px;
+  width: 72px;
+}
+div.bg div.bg__color ul.color__list li.color__item a.color__link-result {
+  background: #eee;
+  display: block;
+  height: 72px;
+  width: 165.6px;
+}
+div.bg div.bg__width {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.bg div.bg__width:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.bg div.bg__width ul.width__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.bg div.bg__width ul.width__list:before,
+div.bg div.bg__width ul.width__list:after {
+  content: "";
+  display: table;
+}
+div.bg div.bg__width ul.width__list:after {
+  clear: both;
+}
+div.bg div.bg__width ul.width__list li.width__item {
+  display: inline-block;
+}
+div.bg div.bg__width ul.width__list li.width__item p.width__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.bg div.bg__width ul.width__list li.width__item a.width__link-select {
+  background: #aaa;
+  display: block;
+  height: 14.4px;
+  width: 230.4px;
+}
+div.bg div.bg__height {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.bg div.bg__height:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.bg div.bg__height ul.height__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.bg div.bg__height ul.height__list:before,
+div.bg div.bg__height ul.height__list:after {
+  content: "";
+  display: table;
+}
+div.bg div.bg__height ul.height__list:after {
+  clear: both;
+}
+div.bg div.bg__height ul.height__list li.height__item {
+  display: inline-block;
+}
+div.bg div.bg__height ul.height__list li.height__item p.height__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.bg div.bg__height ul.height__list li.height__item a.height__link-select {
+  background: #aaa;
+  display: block;
+  height: 14.4px;
+  width: 230.4px;
 }
 div.border {
-  background: #363636;
+  margin: 0 auto;
+  min-height: 300px;
+  width: 388.8px;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.border:before,
+div.border:after {
+  content: "";
+  display: table;
+}
+div.border:after {
+  clear: both;
+}
+div.border div.border__title {
+  color: #a00;
+  font: bold 2em/1.5 'Arial' sans-serif;
+  text-align: center;
+  line-height: 72px;
+}
+div.border div.border__color {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.border div.border__color:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.border div.border__color ul.color__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.border div.border__color ul.color__list:before,
+div.border div.border__color ul.color__list:after {
+  content: "";
+  display: table;
+}
+div.border div.border__color ul.color__list:after {
+  clear: both;
+}
+div.border div.border__color ul.color__list li.color__item {
+  float: left;
+}
+div.border div.border__color ul.color__list li.color__item p.color__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.border div.border__color ul.color__list li.color__item a.color__link-select {
+  background: #af2b4f;
+  display: block;
+  height: 72px;
+  width: 72px;
+}
+div.border div.border__color ul.color__list li.color__item a.color__link-result {
+  background: #eee;
+  display: block;
+  height: 72px;
+  width: 165.6px;
+}
+div.border div.border__size {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.border div.border__size:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.border div.border__size ul.size__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.border div.border__size ul.size__list:before,
+div.border div.border__size ul.size__list:after {
+  content: "";
+  display: table;
+}
+div.border div.border__size ul.size__list:after {
+  clear: both;
+}
+div.border div.border__size ul.size__list li.size__item {
+  display: inline-block;
+}
+div.border div.border__size ul.size__list li.size__item p.size__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.border div.border__size ul.size__list li.size__item a.size__link-select {
+  background: #aaa;
+  display: block;
+  height: 14.4px;
+  width: 230.4px;
+}
+div.border div.border__radius {
+  height: 72px;
+  padding: 0 0 0 7.2px;
+  position: relative;
+}
+div.border div.border__radius:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.border div.border__radius ul.radius__list {
+  display: block;
+  width: auto;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.border div.border__radius ul.radius__list:before,
+div.border div.border__radius ul.radius__list:after {
+  content: "";
+  display: table;
+}
+div.border div.border__radius ul.radius__list:after {
+  clear: both;
+}
+div.border div.border__radius ul.radius__list li.radius__item {
+  display: inline-block;
+}
+div.border div.border__radius ul.radius__list li.radius__item p.radius__item-name {
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 72px;
+  width: 144px;
+}
+div.border div.border__radius ul.radius__list li.radius__item a.radius__link-select {
+  background: #aaa;
+  display: block;
+  height: 14.4px;
+  width: 230.4px;
+}
+div.code {
+  background: #222;
   float: left;
   width: 50%;
-  min-height: 350px;
+  min-height: 450px;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.code:before,
+div.code:after {
+  content: "";
+  display: table;
+}
+div.code:after {
+  clear: both;
+}
+div.send {
+  background: #d37f7f;
+  float: right;
+  width: 50%;
+  min-height: 450px;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+div.send:before,
+div.send:after {
+  content: "";
+  display: table;
+}
+div.send:after {
+  clear: both;
+}
+.text {
+  color: #444;
+  text-shadow: 1px 1px 0 #eee;
 }
 /*	==========================================================================
 	fontface

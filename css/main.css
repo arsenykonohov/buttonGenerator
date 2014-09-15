@@ -287,12 +287,13 @@ table {
 	========================================================================== */
 .title {
   color: #a00;
-  font: bold 2em/1.5 'Arial' sans-serif;
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 120px;
   text-align: center;
 }
 .bginnerdivprop {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 .bginnerdivprop:hover {
@@ -314,14 +315,22 @@ table {
 }
 .bg-inner-p-prop {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 .sliderhorisontal {
   background: #aaa;
   display: block;
-  height: 12px;
-  width: 192px;
+  height: 16px;
+  width: 256px;
+}
+.html_css_prop {
+  font: normal 1.3em sans-serif;
+  float: left;
+  color: #ffffd9;
+  text-align: center;
+  width: 80px;
+  background-color: #292c2d;
 }
 /*	==========================================================================
 	common elements
@@ -395,7 +404,19 @@ div.header ul.header__list:after {
 }
 div.header ul.header__list li.header__item {
   display: inline-block;
-  font: bold 4em/130px 'Arial' sans-serif;
+  font: bold 1em/130px 'Arial' sans-serif;
+}
+div.header ul.header__list li.header__item button.header__button {
+  border-style: solid;
+  color: #eee;
+  font-size: 30px;
+  font-family: sans-serif;
+  background-color: #557;
+  width: 250px;
+  height: 100px;
+  border-color: #f49;
+  border-width: 3px;
+  border-radius: 10px;
 }
 div.container {
   padding-top: 130px;
@@ -431,8 +452,8 @@ div.wrapper__right {
 }
 div.font {
   margin: 0 auto;
-  min-height: 250px;
-  width: 324px;
+  min-height: 400px;
+  width: 432px;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
 }
@@ -446,13 +467,13 @@ div.font:after {
 }
 div.font div.font__title {
   color: #a00;
-  font: bold 2em/1.5 'Arial' sans-serif;
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 120px;
   text-align: center;
-  line-height: 60px;
 }
 div.font div.font__color {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.font div.font__color:hover {
@@ -477,24 +498,24 @@ div.font div.font__color ul.fontcolor__list li.fontcolor__item {
 }
 div.font div.font__color ul.fontcolor__list li.fontcolor__item p.fontcolor__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.font div.font__color ul.fontcolor__list li.fontcolor__item a.fontcolor__link-select {
   background: #1c1c1c;
   display: block;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
 }
 div.font div.font__color ul.fontcolor__list li.fontcolor__item a.fontcolor__link-result {
   background: #eee;
   display: block;
-  height: 60px;
-  width: 138px;
+  height: 80px;
+  width: 184px;
 }
 div.font div.font__size {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.font div.font__size:hover {
@@ -519,18 +540,18 @@ div.font div.font__size ul.fontsize__list li.fontsize__item {
 }
 div.font div.font__size ul.fontsize__list li.fontsize__item p.fontsize__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.font div.font__size ul.fontsize__list li.fontsize__item a.fontsize__link-select {
   background: #aaa;
   display: block;
-  height: 12px;
-  width: 192px;
+  height: 16px;
+  width: 256px;
 }
 div.font div.font__family {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.font div.font__family:hover {
@@ -555,19 +576,19 @@ div.font div.font__family ul.fontfamily__list li.fontfamily__item {
 }
 div.font div.font__family ul.fontfamily__list li.fontfamily__item p.fontfamily__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.font div.font__family ul.fontfamily__list li.fontfamily__item a.fontfamily__link-result {
   background: #eee;
   display: block;
-  height: 60px;
-  width: 198px;
+  height: 80px;
+  width: 264px;
 }
 div.bg {
   margin: 0 auto;
-  min-height: 250px;
-  width: 324px;
+  min-height: 400px;
+  width: 432px;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
 }
@@ -581,13 +602,13 @@ div.bg:after {
 }
 div.bg div.bg__title {
   color: #a00;
-  font: bold 2em/1.5 'Arial' sans-serif;
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 120px;
   text-align: center;
-  line-height: 60px;
 }
 div.bg div.bg__color {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.bg div.bg__color:hover {
@@ -612,24 +633,24 @@ div.bg div.bg__color ul.color__list li.color__item {
 }
 div.bg div.bg__color ul.color__list li.color__item p.color__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.bg div.bg__color ul.color__list li.color__item a.color__link-select {
   background: #43a0d1;
   display: block;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
 }
 div.bg div.bg__color ul.color__list li.color__item a.color__link-result {
   background: #eee;
   display: block;
-  height: 60px;
-  width: 138px;
+  height: 80px;
+  width: 184px;
 }
 div.bg div.bg__width {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.bg div.bg__width:hover {
@@ -654,18 +675,18 @@ div.bg div.bg__width ul.width__list li.width__item {
 }
 div.bg div.bg__width ul.width__list li.width__item p.width__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.bg div.bg__width ul.width__list li.width__item a.width__link-select {
   background: #aaa;
   display: block;
-  height: 12px;
-  width: 192px;
+  height: 16px;
+  width: 256px;
 }
 div.bg div.bg__height {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.bg div.bg__height:hover {
@@ -690,19 +711,19 @@ div.bg div.bg__height ul.height__list li.height__item {
 }
 div.bg div.bg__height ul.height__list li.height__item p.height__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.bg div.bg__height ul.height__list li.height__item a.height__link-select {
   background: #aaa;
   display: block;
-  height: 12px;
-  width: 192px;
+  height: 16px;
+  width: 256px;
 }
 div.border {
   margin: 0 auto;
-  min-height: 250px;
-  width: 324px;
+  min-height: 400px;
+  width: 432px;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
 }
@@ -716,13 +737,13 @@ div.border:after {
 }
 div.border div.border__title {
   color: #a00;
-  font: bold 2em/1.5 'Arial' sans-serif;
+  font: bold 2em 'Arial' sans-serif;
+  line-height: 120px;
   text-align: center;
-  line-height: 60px;
 }
 div.border div.border__color {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.border div.border__color:hover {
@@ -747,24 +768,24 @@ div.border div.border__color ul.color__list li.color__item {
 }
 div.border div.border__color ul.color__list li.color__item p.color__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.border div.border__color ul.color__list li.color__item a.color__link-select {
   background: #af2b4f;
   display: block;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
 }
 div.border div.border__color ul.color__list li.color__item a.color__link-result {
   background: #eee;
   display: block;
-  height: 60px;
-  width: 138px;
+  height: 80px;
+  width: 184px;
 }
 div.border div.border__size {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.border div.border__size:hover {
@@ -789,18 +810,18 @@ div.border div.border__size ul.size__list li.size__item {
 }
 div.border div.border__size ul.size__list li.size__item p.size__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.border div.border__size ul.size__list li.size__item a.size__link-select {
   background: #aaa;
   display: block;
-  height: 12px;
-  width: 192px;
+  height: 16px;
+  width: 256px;
 }
 div.border div.border__radius {
-  height: 60px;
-  padding: 0 0 0 6px;
+  height: 80px;
+  padding: 0 0 0 8px;
   position: relative;
 }
 div.border div.border__radius:hover {
@@ -825,20 +846,19 @@ div.border div.border__radius ul.radius__list li.radius__item {
 }
 div.border div.border__radius ul.radius__list li.radius__item p.radius__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 60px;
-  width: 120px;
+  line-height: 80px;
+  width: 160px;
 }
 div.border div.border__radius ul.radius__list li.radius__item a.radius__link-select {
   background: #aaa;
   display: block;
-  height: 12px;
-  width: 192px;
+  height: 16px;
+  width: 256px;
 }
 div.code {
-  background: #333333;
   margin: 0 auto;
-  max-width: 480px;
-  min-height: 500px;
+  max-width: 100%;
+  min-height: 400px;
   position: relative;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
@@ -853,21 +873,39 @@ div.code:after {
 }
 div.code div.code__html {
   background: #1d1f20;
-  height: 120px;
+  height: 80px;
+}
+div.code div.code__html div.code__html-title {
+  font: normal 1.3em sans-serif;
+  float: left;
+  color: #ffffd9;
+  text-align: center;
+  width: 80px;
+  background-color: #292c2d;
+  line-height: 80px;
 }
 div.code div.code__css {
   background: #1d1f20;
   border-top: solid 1px #666;
-  min-height: 500px;
+  min-height: 320px;
+}
+div.code div.code__css div.code__css-title {
+  font: normal 1.3em sans-serif;
+  float: left;
+  color: #ffffd9;
+  text-align: center;
+  width: 80px;
+  background-color: #292c2d;
+  line-height: 320px;
 }
 div.send {
   background: #eee;
-  height: 120px;
+  height: 160px;
   min-width: 100%;
   position: relative;
 }
 .dark {
-  background: #333333;
+  background: #1d1f20;
 }
 .text {
   color: #444;
@@ -876,46 +914,9 @@ div.send {
 /*	==========================================================================
 	fontface
 	========================================================================== */
-@font-face {
-  font-family: Bold;
-  src: url('fonts/MyriadPro-Bold.otf');
-}
-@font-face {
-  font-family: BoldCond;
-  src: url('fonts/MyriadPro-BoldCond.otf');
-}
-@font-face {
-  font-family: BoldCondIt;
-  src: url('fonts/MyriadPro-BoldCondIt.otf');
-}
-@font-face {
-  font-family: BoldIt;
-  src: url('fonts/MyriadPro-BoldIt.otf');
-}
-@font-face {
-  font-family: Cond;
-  src: url('fonts/MyriadPro-Cond.otf');
-}
-@font-face {
-  font-family: CondIt;
-  src: url('fonts/MyriadPro-CondIt.otf');
-}
-@font-face {
-  font-family: It;
-  src: url('fonts/MyriadPro-It.otf');
-}
-@font-face {
-  font-family: Regular;
-  src: url('fonts/MyriadPro-Regular.otf');
-}
-@font-face {
-  font-family: Semibold;
-  src: url('fonts/MyriadPro-Semibold.otf');
-}
-@font-face {
-  font-family: SemiboldIt;
-  src: url('fonts/MyriadPro-SemiboldIt.otf');
-}
+/*	==========================================================================
+	media-queries
+	========================================================================== */
 @media only screen and (max-width: 780px) {
   div.wrapper__left {
     border-right: none;

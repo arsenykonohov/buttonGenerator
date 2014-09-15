@@ -14,7 +14,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		
 
-		<link rel="stylesheet" href="css/normalize.css">
+<!--		<link rel="stylesheet" href="css/normalize.css">-->
 
 		<link rel="stylesheet" href="css/main.css">
 		
@@ -26,13 +26,16 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<div class="header">
-			<div class="header__button"></div>
+			<ul class="header__list">
+				<li class="header__item">&rArr;</li>
+				<li class="header__item">button</li>
+				<li class="header__item">&lArr;</li>
+			</ul>
 		</div>
 		
 		<div class="container">
 		
 			<div class="wrapper">
-
 				<div class="font">
 					<div class="font__title">FONT</div>
 					<div class="font__color">
@@ -61,15 +64,14 @@
 					<div class="font__family">
 						<ul class="fontfamily__list">
 							<li class="fontfamily__item">
-								<p class="fontfamily__item-name text">family</p>
+								<p class="fontfamily__item-name text">family:</p>
 							</li>
 							<li class="fontfamily__item">
-								<a href="#" class="fontfamily__link-select"></a>
+								<a href="#" class="fontfamily__link-result"></a>
 							</li>
 						</ul>
 					</div>
 				</div>
-		
 			</div>
 			
 			<div class="wrapper__left">
@@ -150,14 +152,18 @@
 				</div>
 			</div>
 			
-			<div class="code">
-				<div class="code__html"></div>
-				<div class="code__css"></div>
+			<div class="wrapper dark">
+				<div class="code">
+					<div class="code__html"></div>
+					<div class="code__css"></div>
+					<div class="code__send"></div>
+				</div>
+				<div class="send">
+					<div class="send__input"></div>
+					<div class="send__press"></div>
+				</div>
 			</div>
 			
-			<div class="send">
-				<form action=""></form>
-			</div>
 		</div>
 		
 		<script src="js/vendor/jquery-1.11.0.min.js"></script>

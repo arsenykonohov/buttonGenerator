@@ -1,8 +1,6 @@
-/*	==========================================================================
-	mixins LESS
-	========================================================================== */
-
+@import url('normalize.less');
 @import url('mixins.less');
+
 
 /*	==========================================================================
 	adjust my LESS
@@ -10,10 +8,11 @@
 
 @body_font: 'Arial' sans-serif;
 
-@header: 100px;
-@containers: 300px;
+@header: 130px;
+@containers: 250px;
 @bg__section: 0.24*@containers;
 
+@code: #333;
 //@media 
 
 .shadowForBox (@unitBox: 0px 3px 6px 0px rgba(0,0,0,0.5);) {
@@ -37,7 +36,7 @@
 	padding: 0 0 0 0.1*@bg__section;
 	position: relative;
 	&:hover {
-		background: rgba(255, 255, 255, 0.3);
+		background: rgba(255, 255, 255, 0.2);
 	}
 }
 .list {
@@ -108,7 +107,18 @@ div.header {
 	top: 0;
 	width: 100%;
 	z-index: 5;
-	.shadowForBox
+	.shadowForBox;
+	
+	ul.header__list {
+		min-height: @header;
+		text-align: center;
+		.clearfix;
+		
+		li.header__item {
+			display: inline-block;
+			font: bold 4em/@header @body_font;
+		}
+	}
 }
 
 
@@ -124,11 +134,13 @@ div.wrapper {
 }
 div.wrapper__left {
 	border-right: solid 3px #666;
+	border-bottom: solid 3px #666;
 	float: left;
 	position: relative;
 	width: 50%;
 }
 div.wrapper__right {
+	border-bottom: solid 3px #666;
 	float: right;
 	position: relative;
 	width: 50%;
@@ -196,13 +208,16 @@ div.font {
 			.list;
 			
 			li.fontfamily__item {
-				display: inline-block;
+				float: left;
 				
 				p.fontfamily__item-name {
-					.bg-inner-p-prop;
-				}
-				a.fontfamily__link-select {
-					.sliderhorisontal;
+					.bg-inner-p-prop;			}
+				
+				a.fontfamily__link-result {
+					background: #eee;
+					display: block;
+					height: @bg__section;
+					width: 3.3*@bg__section;
 				}
 			}
 		}
@@ -361,20 +376,37 @@ div.border {
 
 
 div.code {
-	background: #222;
-	float: left;
-	width: 50%;
-	min-height: @containers*1.5;
+	background: @code;
+//	border-left: solid 2px #aaa;
+//	border-right: solid 2px #aaa;
+	margin: 0 auto;
+	max-width: 8*@bg__section;
+	min-height: 2*@containers;
+	position: relative;
 	.clearfix;
+	
+	div.code__html {
+		background: #1d1f20;
+		height: 2*@bg__section;
+	}
+	
+	div.code__css {
+		background: #1d1f20;
+		border-top: solid 1px #666;
+		min-height: 2*@containers;
+	}
 }
 div.send {
-	background: #d37f7f;
-	float: right;
-	width: 50%;
-	min-height: @containers*1.5;
-	.clearfix;
+	background: #eee;
+	height: 2*@bg__section;
+	min-width: 100%;
+	position: relative;
 }
 
+
+.dark {
+	background: @code;
+}
 .text {
 	color: #444;
 	text-shadow: 1px 1px 0 #eee;
@@ -393,3 +425,22 @@ div.send {
 @font-face {font-family: Regular;		src: url('fonts/MyriadPro-Regular.otf');}
 @font-face {font-family: Semibold;		src: url('fonts/MyriadPro-Semibold.otf');}
 @font-face {font-family: SemiboldIt;	src: url('fonts/MyriadPro-SemiboldIt.otf');}
+
+@media only screen and (max-width: 780px) {
+
+div.wrapper__left {
+	border-right: none;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+	
+div.wrapper__right {
+	float: left;
+	position: relative;
+	width: 100%;
+}
+}
+
+
+

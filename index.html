@@ -17,6 +17,7 @@
 <!--		<link rel="stylesheet" href="css/normalize.css">-->
 
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/main.css">
 		
 		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
@@ -47,10 +48,9 @@
 								<p class="fontcolor__item-name text">color:</p>
 							</li>
 							<li class="fontcolor__item">
-								<a href="#" class="fontcolor__link-select"></a>
-							</li>
-							<li class="fontcolor__item">
-								<a href="#" class="fontcolor__link-result"></a>
+								<div class="fontcolor__link-select">
+									<input class="color" id="fontcolor" type="text" value="458444">
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -81,16 +81,16 @@
 				<div class="bg">
 					<div class="bg__title">BACKGROUND</div>
 					<div class="bg__color">
-						<ul class="color__list">
-							<li class="color__item">
-								<p class="color__item-name text">color:</p>
+						<ul class="bgcolor__list">
+							<li class="bgcolor__item">
+								<p class="bgcolor__item-name text">color:</p>
 							</li>
-							<li class="color__item">
-								<a href="#" class="color__link-select"></a>
+							<li class="bgcolor__item">
+								<div class="bgcolor__link-select">
+									<input class="color" id="bgcolor" type="text" value="fcf285">
+								</div>
 							</li>
-							<li class="color__item">
-								<a href="#" class="color__link-result"></a>
-							</li>
+
 						</ul>
 					</div>
 					<div class="bg__width">
@@ -120,15 +120,14 @@
 				<div class="border">
 					<div class="border__title">BORDER</div>
 					<div class="border__color">
-						<ul class="color__list">
-							<li class="color__item">
-								<p class="color__item-name text">color:</p>
+						<ul class="bordercolor__list">
+							<li class="bordercolor__item">
+								<p class="bordercolor__item-name text">color:</p>
 							</li>
-							<li class="color__item">
-								<a href="#" class="color__link-select"></a>
-							</li>
-							<li class="color__item">
-								<a href="#" class="color__link-result"></a>
+							<li class="bordercolor__item">
+								<div class="bordercolor__link-select">
+									<input class="color" id="bordercolor" type="text" value="933920">
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -159,9 +158,15 @@
 				<div class="code">
 					<div class="code__html">
 						<div class="code__html-title">HTML:</div>
+						<div class="code__html-result">
+							<textarea class="" name="" id="html_result" cols="40" rows="">aegjsfergf</textarea>
+						</div>
 					</div>
 					<div class="code__css">
 						<div class="code__css-title">CSS:</div>
+						<div class="code__css-result">
+							<textarea class="" name="" id="css_result" cols="40" rows="">dsfasdf</textarea>
+						</div>					
 					</div>
 				</div>
 			</div>
@@ -174,6 +179,7 @@
 			
 		</div>
 		
+		<script type="text/javascript" src="js\jscolor\jscolor.js"></script>
 		<script src="js/vendor/jquery-1.11.0.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>

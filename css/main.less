@@ -7,6 +7,7 @@
 	========================================================================== */
 
 @body_font: 'Arial' sans-serif;
+@code_font: 'Arial' sans-serif;
 
 @header: 130px;
 @containers: 350px;
@@ -15,10 +16,15 @@
 @code: #1d1f20;
 //@media 
 
-.shadowForBox (@unitBox: 0px 3px 6px 0px rgba(0,0,0,0.5);) {
-	-webkit-box-shadow: @unitBox;
-	-moz-box-shadow: @unitBox;
-	box-shadow: @unitBox;
+.shadowForBox (@unitBox1: 0px 3px 6px 0px rgba(0,0,0,0.5);) {
+	-webkit-box-shadow: @unitBox1;
+	-moz-box-shadow: @unitBox1;
+	box-shadow: @unitBox1;
+}
+.lightForBox (@unitBox2: 0px 0px 8px 3px rgba(255, 255, 255, 0.4);) {
+	-webkit-box-shadow: @unitBox2;
+	-moz-box-shadow: @unitBox2;
+	box-shadow: @unitBox2;
 }
 .insetShadowForBox (@unitInset: inset 1px 1px 3px 2px rgba(0,0,0,0.5);) {
 	-webkit-box-shadow: @unitInset;
@@ -63,6 +69,34 @@
 	text-align: center;
 	width: @bg__section;
 	background-color: lighten(@code, 5%);
+}
+.dark {
+	background: @code;
+}
+.text {
+	color: #444;
+	text-shadow: 1px 1px 0 #eee;
+}
+input.color {
+	border: none;
+	cursor: crosshair;
+	display: block;
+	font: normal 1.5em @code_font;
+	height: 100%;
+	outline: none;
+	position: absolute;
+	text-indent: 15px;
+	width: 100%;
+	.insetShadowForBox;
+}
+textarea {
+	border: none;
+	background: @code;
+	color: #fadcff;
+	font: normal 1em @code_font;
+	display: block;
+	height: 100%;
+	position: absolute;
 }
 /*	==========================================================================
 	common elements
@@ -192,17 +226,12 @@ div.font {
 				p.fontcolor__item-name {
 					.bg-inner-p-prop;			}
 				
-				a.fontcolor__link-select {
-					background: #1c1c1c;
+				div.fontcolor__link-select {
 					display: block;
 					height: @bg__section;
-					width: @bg__section;
-				}
-				a.fontcolor__link-result {
-					background: #eee;
-					display: block;
-					height: @bg__section;
-					width: 2.3*@bg__section;
+					position: relative;
+					width: 3.3*@bg__section;
+					.lightForBox;
 				}
 			}
 		}
@@ -260,26 +289,22 @@ div.bg {
 	div.bg__color {
 		.bginnerdivprop;
 		
-		ul.color__list {
+		ul.bgcolor__list {
 			.list;
 			
-			li.color__item {
+			li.bgcolor__item {
 				float: left;
 				
-				p.color__item-name {
+				p.bgcolor__item-name {
 					.bg-inner-p-prop;			}
 				
-				a.color__link-select {
+				div.bgcolor__link-select {
 					background: #43a0d1;
 					display: block;
 					height: @bg__section;
-					width: @bg__section;
-				}
-				a.color__link-result {
-					background: #eee;
-					display: block;
-					height: @bg__section;
-					width: 2.3*@bg__section;
+					position: relative;
+					width: 3.3*@bg__section;
+					.lightForBox;
 				}
 			}
 		}
@@ -334,26 +359,22 @@ div.border {
 	div.border__color {
 		.bginnerdivprop;
 		
-		ul.color__list {
+		ul.bordercolor__list {
 			.list;
 			
-			li.color__item {
+			li.bordercolor__item {
 				float: left;
 				
-				p.color__item-name {
+				p.bordercolor__item-name {
 					.bg-inner-p-prop;			}
 				
-				a.color__link-select {
+				div.bordercolor__link-select {
 					background: #af2b4f;
 					display: block;
 					height: @bg__section;
-					width: @bg__section;
-				}
-				a.color__link-result {
-					background: #eee;
-					display: block;
-					height: @bg__section;
-					width: 2.3*@bg__section;
+					position: relative;
+					width: 3.3*@bg__section;
+					.lightForBox
 				}
 			}
 		}
@@ -398,7 +419,6 @@ div.border {
 
 
 div.code {
-	margin: 0 auto;
 	max-width: 100%;
 	min-height: 1*@containers;
 	position: relative;
@@ -407,10 +427,17 @@ div.code {
 	div.code__html {
 		background: @code;
 		height: 1*@bg__section;
+		overflow: hidden;
 		
 		div.code__html-title {
 			.html_css_prop;
 			line-height: @bg__section;
+		}
+		div.code__html-result {
+			float: left;
+			max-width: 100%;
+			height: 100%;
+			position: relative;
 		}
 	}
 	
@@ -423,6 +450,12 @@ div.code {
 			.html_css_prop;
 			line-height: 4*@bg__section;
 		}
+		div.code__css-result {
+			float: left;
+			max-width: 100%;
+			height: 4*@bg__section;
+			position: relative;
+		}
 	}
 }
 div.send {
@@ -432,14 +465,6 @@ div.send {
 	position: relative;
 }
 
-
-.dark {
-	background: @code;
-}
-.text {
-	color: #444;
-	text-shadow: 1px 1px 0 #eee;
-}
 /*	==========================================================================
 	fontface
 	========================================================================== */

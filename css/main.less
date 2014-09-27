@@ -9,7 +9,7 @@
 @body_font: 'Arial' sans-serif;
 
 @header: 130px;
-@containers: 400px;
+@containers: 350px;
 @bg__section: 0.2*@containers;
 
 @code: #1d1f20;
@@ -127,17 +127,17 @@ div.header {
 			display: inline-block;
 			font: bold 1em/@header @body_font;
 			
-			button.header__button {
+			button#button__generator {
 				border-style: solid;
-				
+				//font
 				color: #eee;
-				font-size: 30px;
+				font-size: 20px;
 				font-family: sans-serif;
-				
+				//background
 				background-color: #557;
-				width: 250px;
-				height: 100px;
-				
+				width: 350px;
+				padding: 40px 0;
+				//border
 				border-color: #f49;
 				border-width: 3px;
 				border-radius: 10px;
@@ -460,7 +460,7 @@ div.send {
 	media-queries
 	========================================================================== */
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 800px) {
 	div.wrapper__left {
 		border-right: none;
 		float: left;

@@ -288,12 +288,12 @@ table {
 .title {
   color: #a00;
   font: bold 2em 'Arial' sans-serif;
-  line-height: 120px;
+  line-height: 105px;
   text-align: center;
 }
 .bginnerdivprop {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 .bginnerdivprop:hover {
@@ -315,21 +315,21 @@ table {
 }
 .bg-inner-p-prop {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 .sliderhorisontal {
   background: #aaa;
   display: block;
-  height: 16px;
-  width: 256px;
+  height: 14px;
+  width: 224px;
 }
 .html_css_prop {
   font: normal 1.3em sans-serif;
   float: left;
   color: #ffffd9;
   text-align: center;
-  width: 80px;
+  width: 70px;
   background-color: #292c2d;
 }
 /*	==========================================================================
@@ -406,14 +406,14 @@ div.header ul.header__list li.header__item {
   display: inline-block;
   font: bold 1em/130px 'Arial' sans-serif;
 }
-div.header ul.header__list li.header__item button.header__button {
+div.header ul.header__list li.header__item button#button__generator {
   border-style: solid;
   color: #eee;
-  font-size: 30px;
+  font-size: 20px;
   font-family: sans-serif;
   background-color: #557;
-  width: 250px;
-  height: 100px;
+  width: 350px;
+  padding: 40px 0;
   border-color: #f49;
   border-width: 3px;
   border-radius: 10px;
@@ -452,8 +452,8 @@ div.wrapper__right {
 }
 div.font {
   margin: 0 auto;
-  min-height: 400px;
-  width: 432px;
+  min-height: 350px;
+  width: 378px;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
 }
@@ -468,12 +468,12 @@ div.font:after {
 div.font div.font__title {
   color: #a00;
   font: bold 2em 'Arial' sans-serif;
-  line-height: 120px;
+  line-height: 105px;
   text-align: center;
 }
 div.font div.font__color {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.font div.font__color:hover {
@@ -498,24 +498,24 @@ div.font div.font__color ul.fontcolor__list li.fontcolor__item {
 }
 div.font div.font__color ul.fontcolor__list li.fontcolor__item p.fontcolor__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.font div.font__color ul.fontcolor__list li.fontcolor__item a.fontcolor__link-select {
   background: #1c1c1c;
   display: block;
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
 div.font div.font__color ul.fontcolor__list li.fontcolor__item a.fontcolor__link-result {
   background: #eee;
   display: block;
-  height: 80px;
-  width: 184px;
+  height: 70px;
+  width: 161px;
 }
 div.font div.font__size {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.font div.font__size:hover {
@@ -540,18 +540,18 @@ div.font div.font__size ul.fontsize__list li.fontsize__item {
 }
 div.font div.font__size ul.fontsize__list li.fontsize__item p.fontsize__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.font div.font__size ul.fontsize__list li.fontsize__item a.fontsize__link-select {
   background: #aaa;
   display: block;
-  height: 16px;
-  width: 256px;
+  height: 14px;
+  width: 224px;
 }
 div.font div.font__family {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.font div.font__family:hover {
@@ -576,19 +576,19 @@ div.font div.font__family ul.fontfamily__list li.fontfamily__item {
 }
 div.font div.font__family ul.fontfamily__list li.fontfamily__item p.fontfamily__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.font div.font__family ul.fontfamily__list li.fontfamily__item a.fontfamily__link-result {
   background: #eee;
   display: block;
-  height: 80px;
-  width: 264px;
+  height: 70px;
+  width: 231px;
 }
 div.bg {
   margin: 0 auto;
-  min-height: 400px;
-  width: 432px;
+  min-height: 350px;
+  width: 378px;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
 }
@@ -603,12 +603,12 @@ div.bg:after {
 div.bg div.bg__title {
   color: #a00;
   font: bold 2em 'Arial' sans-serif;
-  line-height: 120px;
+  line-height: 105px;
   text-align: center;
 }
 div.bg div.bg__color {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.bg div.bg__color:hover {
@@ -633,24 +633,24 @@ div.bg div.bg__color ul.color__list li.color__item {
 }
 div.bg div.bg__color ul.color__list li.color__item p.color__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.bg div.bg__color ul.color__list li.color__item a.color__link-select {
   background: #43a0d1;
   display: block;
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
 div.bg div.bg__color ul.color__list li.color__item a.color__link-result {
   background: #eee;
   display: block;
-  height: 80px;
-  width: 184px;
+  height: 70px;
+  width: 161px;
 }
 div.bg div.bg__width {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.bg div.bg__width:hover {
@@ -675,18 +675,18 @@ div.bg div.bg__width ul.width__list li.width__item {
 }
 div.bg div.bg__width ul.width__list li.width__item p.width__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.bg div.bg__width ul.width__list li.width__item a.width__link-select {
   background: #aaa;
   display: block;
-  height: 16px;
-  width: 256px;
+  height: 14px;
+  width: 224px;
 }
 div.bg div.bg__height {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.bg div.bg__height:hover {
@@ -711,19 +711,19 @@ div.bg div.bg__height ul.height__list li.height__item {
 }
 div.bg div.bg__height ul.height__list li.height__item p.height__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.bg div.bg__height ul.height__list li.height__item a.height__link-select {
   background: #aaa;
   display: block;
-  height: 16px;
-  width: 256px;
+  height: 14px;
+  width: 224px;
 }
 div.border {
   margin: 0 auto;
-  min-height: 400px;
-  width: 432px;
+  min-height: 350px;
+  width: 378px;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
 }
@@ -738,12 +738,12 @@ div.border:after {
 div.border div.border__title {
   color: #a00;
   font: bold 2em 'Arial' sans-serif;
-  line-height: 120px;
+  line-height: 105px;
   text-align: center;
 }
 div.border div.border__color {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.border div.border__color:hover {
@@ -768,24 +768,24 @@ div.border div.border__color ul.color__list li.color__item {
 }
 div.border div.border__color ul.color__list li.color__item p.color__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.border div.border__color ul.color__list li.color__item a.color__link-select {
   background: #af2b4f;
   display: block;
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
 div.border div.border__color ul.color__list li.color__item a.color__link-result {
   background: #eee;
   display: block;
-  height: 80px;
-  width: 184px;
+  height: 70px;
+  width: 161px;
 }
 div.border div.border__size {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.border div.border__size:hover {
@@ -810,18 +810,18 @@ div.border div.border__size ul.size__list li.size__item {
 }
 div.border div.border__size ul.size__list li.size__item p.size__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.border div.border__size ul.size__list li.size__item a.size__link-select {
   background: #aaa;
   display: block;
-  height: 16px;
-  width: 256px;
+  height: 14px;
+  width: 224px;
 }
 div.border div.border__radius {
-  height: 80px;
-  padding: 0 0 0 8px;
+  height: 70px;
+  padding: 0 0 0 7px;
   position: relative;
 }
 div.border div.border__radius:hover {
@@ -846,19 +846,19 @@ div.border div.border__radius ul.radius__list li.radius__item {
 }
 div.border div.border__radius ul.radius__list li.radius__item p.radius__item-name {
   font: bold 2em 'Arial' sans-serif;
-  line-height: 80px;
-  width: 160px;
+  line-height: 70px;
+  width: 140px;
 }
 div.border div.border__radius ul.radius__list li.radius__item a.radius__link-select {
   background: #aaa;
   display: block;
-  height: 16px;
-  width: 256px;
+  height: 14px;
+  width: 224px;
 }
 div.code {
   margin: 0 auto;
   max-width: 100%;
-  min-height: 400px;
+  min-height: 350px;
   position: relative;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
@@ -873,34 +873,34 @@ div.code:after {
 }
 div.code div.code__html {
   background: #1d1f20;
-  height: 80px;
+  height: 70px;
 }
 div.code div.code__html div.code__html-title {
   font: normal 1.3em sans-serif;
   float: left;
   color: #ffffd9;
   text-align: center;
-  width: 80px;
+  width: 70px;
   background-color: #292c2d;
-  line-height: 80px;
+  line-height: 70px;
 }
 div.code div.code__css {
   background: #1d1f20;
   border-top: solid 1px #666;
-  min-height: 320px;
+  min-height: 280px;
 }
 div.code div.code__css div.code__css-title {
   font: normal 1.3em sans-serif;
   float: left;
   color: #ffffd9;
   text-align: center;
-  width: 80px;
+  width: 70px;
   background-color: #292c2d;
-  line-height: 320px;
+  line-height: 280px;
 }
 div.send {
   background: #eee;
-  height: 160px;
+  height: 140px;
   min-width: 100%;
   position: relative;
 }
@@ -917,7 +917,7 @@ div.send {
 /*	==========================================================================
 	media-queries
 	========================================================================== */
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 800px) {
   div.wrapper__left {
     border-right: none;
     float: left;

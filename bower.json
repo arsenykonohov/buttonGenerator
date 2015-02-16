@@ -1,0 +1,14 @@
+{
+  "name": "simple-temp",
+  "version": "0.0.0",
+  "authors": [
+    "arsenykonohov <arsenykonohov@gmail.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "normalize.css": "~3.0.2",
+    "modernizr": "~2.8.3",
+    "jquery": "1.8.3",
+    "components-font-awesome": "~4.3.0"
+  }
+}

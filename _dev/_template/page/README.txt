@@ -1,0 +1,1 @@
+here index tuning & other pages for your template (jade)

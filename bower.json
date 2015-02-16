@@ -9,6 +9,7 @@
     "normalize.css": "~3.0.2",
     "modernizr": "~2.8.3",
     "jquery": "1.8.3",
-    "components-font-awesome": "~4.3.0"
+    "components-font-awesome": "~4.3.0",
+    "jqueryui": "~1.11.3"
   }
 }

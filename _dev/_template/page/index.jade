@@ -1,0 +1,75 @@
+extends ../layout/layout
+
+block title
+    | btn-G
+
+block content
+    .wrapper
+        h1.wrapper__title button Generator
+        
+        p.wrapper__description This is a my first JS project
+        
+        section.wrapper__coll
+            .result
+                .result__row
+                    .button yourButton 
+                .result__row
+                    textarea.result__item.html
+                .result__row
+                    textarea.result__item.css
+                    
+        section.wrapper__coll
+            // button width
+            .adjust.btnwidth
+                .adjust__item
+                    h3.adjust__title Change button width
+                    input.adjust__input.btnwidth__val(type="text")
+                .adjust__item
+                    .btnwidth__slider
+                    
+            // button height
+            .adjust.btnheight
+                .adjust__item
+                    h3.adjust__title Change button height
+                    input.adjust__input.btnheight__val(type="text")
+                .adjust__item
+                    .btnheith__slider
+                    
+            // button font-size
+            .adjust.fontsize
+                .adjust__item
+                    h3.adjust__title Change font-size
+                    input.adjust__input.fontsize__val(type="text")
+                .adjust__item
+                    .fontsize__slider
+                
+            // button border-width 
+            .adjust.borderwidth
+                .adjust__item
+                    h3.adjust__title Change border-width
+                    input.adjust__input.borderwidth__val(type="text")
+                .adjust__item
+                    .borderwidth__slider
+                    
+            // button border-radius
+            .adjust.btnradius
+                .adjust__item
+                    h3.adjust__title Change border-radius
+                    input.adjust__input.btnradius__val(type="text")
+                .adjust__item
+                    .btnradius__slider
+                    
+            // button border color
+            .adjust.bordercolor
+                .adjust__item
+                    h3.adjust__title Change border color
+                .adjust__item
+                    input.bordercolor__Change.color
+                    
+            // button background color
+            .adjust.bgcolor
+                .adjust__item
+                    h3.adjust__title Change background color
+                .adjust__item
+                    input.bgcolor__Change.color
+

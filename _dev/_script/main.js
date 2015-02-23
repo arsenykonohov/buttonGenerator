@@ -7,19 +7,14 @@ var console,
     
     var buttonGenerator,
         btn = $('.button'),
-        
         btnWidth = $(".btnwidth__slider"),
         btnWidthVal = $(".btnwidth__val"),
-        
         btnHeight = $(".btnheith__slider"),
         btnHeightVal = $(".btnheight__val"),
-        
         btnFontSize = $(".fontsize__slider"),
         btnFontSizeVal = $(".fontsize__val"),
-        
         btnBorderWIdth = $(".borderwidth__slider"),
         btnBorderWIdthVal = $(".borderwidth__val"),
-        
         btnBorderRadius = $(".btnradius__slider"),
         btnBorderRadiusVal = $(".btnradius__val");
         

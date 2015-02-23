@@ -1,0 +1,1 @@
+here style for jQuery plugins & other too. (css, scss, sass) 

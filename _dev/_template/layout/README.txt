@@ -1,0 +1,1 @@
+here general layout for your template (jade)

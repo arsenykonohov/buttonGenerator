@@ -1,0 +1,1 @@
+here general parts for your template. Example: header, nav, footer & other (jade)

@@ -1,0 +1,1 @@
+## common part for templates - here! ##

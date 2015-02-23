@@ -1,1 +1,1 @@
-here parts for your styleshets (scss, sass)
+here parts for your styleshets (scss, sass) 

@@ -26,6 +26,7 @@ var require, console,
 // ============================================= WORKING TASKS
 
 
+
 //local server config 
 gulp.task('connect', function () {
     connect.server({
@@ -33,6 +34,7 @@ gulp.task('connect', function () {
         livereload: true
     });
 });
+
 
 
 // jade compile to html 
@@ -48,7 +50,9 @@ gulp.task('jade', function () {
         .pipe(notify('JADE'));
 });
 
-// sass
+
+
+// css plugins
 gulp.task('sass', function () {
     gulp.src('_dev/_style/*.scss')
         .pipe(sass())
@@ -56,23 +60,32 @@ gulp.task('sass', function () {
         .pipe(connect.reload())
         .pipe(notify('SCSS'));
 });
-// uncss - clean your css
+gulp.task('plugin-css', function () {
+    gulp.src('_dev/_style/plugins/*.scss')
+        .pipe(sass())
+        .pipe(concat('plugin.css'))
+        .pipe(gulp.dest('app/css'))
+        .pipe(connect.reload())
+        .pipe(notify('plugin-CSS'));
+});
 gulp.task('uncss', function () {
     return gulp.src('_dev/css/*.css')
         .pipe(uncss({
             html: ['_dev/index.html']
-        }))
-        .pipe(concat('bundle.css'))
+        }))                         // uncss - clean your css
+        .pipe(concat('main.css'))
         .pipe(gulp.dest('app/css'))
         .pipe(minifyCSS())
-        .pipe(rename('bundle.min.css'))
+        .pipe(rename('main.min.css'))
         .pipe(gulp.dest('app/css'))
         .pipe(connect.reload())
         .pipe(notify('CSS was CLEAN & MIN'));
 });
 gulp.task('css', function (cb) {
-    runSequence('sass','uncss', cb);
+    runSequence('sass', 'plugin-css', 'uncss', cb);
 });
+
+
 
 
 // sprite generator & image optimizer 
@@ -84,10 +97,8 @@ gulp.task('sprite', function () {
         }));
     spriteData.img.pipe(gulp.dest('app/img/'))     // путь, куда сохраняем картинку
         .pipe(notify('SPRITE img'));
-    
     spriteData.css.pipe(gulp.dest('_dev/css/'))     // путь, куда сохраняем стили
         .pipe(notify('SPRITE css'));
-    
     spriteData.img.pipe(imagemin())              // Оптимизируем изображение
         .pipe(gulp.dest('app/img/'))
         .pipe(connect.reload())
@@ -100,6 +111,8 @@ gulp.task('img', function () {
         .pipe(connect.reload())
         .pipe(notify('IMG'));
 });
+
+
 
 
 // javascript 
@@ -115,11 +128,13 @@ gulp.task('js', function () {
 });
 
 
+
+
 // vendor build
-gulp.task('rimraf', function() {
-  return gulp.src('./app/*.html')
-    .pipe(rimraf())
-    .pipe(notify('rimraf-rimraf-rimraf-rimraf-rimraf'));
+gulp.task('rimraf', function () {
+    return gulp.src('./app/*.html')
+        .pipe(rimraf())
+        .pipe(notify('rimraf-rimraf-rimraf-rimraf-rimraf'));
 });
 gulp.task('bower', function () {
     return gulp.src('./_dev/*.html')
@@ -143,14 +158,18 @@ gulp.task('useref', function () {
 });
 // vendor build here
 gulp.task('vendor', function (cb) {
-    runSequence('rimraf','bower', 'useref', cb);
+    runSequence('rimraf', 'bower', 'useref', cb);
 });
+
+
 
 
 // general build
 gulp.task('build', function (cb) {
     runSequence(['jade', 'sass', 'js'], ['sprite', 'img'], cb);
 });
+
+
 
 
 //// watch
@@ -163,6 +182,8 @@ gulp.task('watch', function () {
     gulp.watch(['_dev/_template/**/*.jade'], ['vendor']);   // fail
 //    gulp.watch(['_dev/_style/**/*.scss', '_dev/css/*.*'], ['uncss']);       // fail
 });
+
+
 
 
 gulp.task('default', ['build', 'connect', 'watch']); // working directory

@@ -1,0 +1,47 @@
+textarea, input {
+    outline: none;
+}
+textarea{
+    resize: none;
+}
+.result__row {
+    padding: 10px;
+}
+.button {
+    background: green;
+    color: #fff;
+    display: inline-block;
+    border-color: red;
+    border-style: solid;
+}
+.result__item {
+    min-width: 400px;
+}
+.html {
+    min-height: 40px;
+}
+.css {
+    min-height: 200px;
+}
+// content
+.wrapper__coll {
+    width: 50%;
+    float: left;
+}
+.adjust {
+    padding: 15px 20px 0 20px;
+}
+.adjust__title {
+    color: #444;
+    display: inline-block;
+}
+.adjust__input {
+    text-align: center;
+    background: gold;
+    border: 1px dotted #333;
+    color: #222;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 5px;
+    width: 60px;
+}

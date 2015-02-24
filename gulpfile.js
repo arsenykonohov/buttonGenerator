@@ -111,7 +111,15 @@ gulp.task('img', function () {
         .pipe(connect.reload())
         .pipe(notify('IMG'));
 });
-
+gulp.task('favicon', function () {
+    gulp.src('_dev/_favicon/*.ico')
+        .pipe(gulp.dest('app/'))
+        .pipe(connect.reload())
+        .pipe(notify('FAVICON'));
+});
+gulp.task('images', function (cb) {
+    runSequence('sprite', 'img', 'favicon', cb);
+});
 
 
 
@@ -166,7 +174,7 @@ gulp.task('vendor', function (cb) {
 
 // general build
 gulp.task('build', function (cb) {
-    runSequence(['jade', 'sass', 'js'], ['sprite', 'img'], cb);
+    runSequence(['jade', 'sass', 'js'], 'images', cb);
 });
 
 
@@ -177,7 +185,8 @@ gulp.task('watch', function () {
     gulp.watch(['_dev/_template/**/*.jade'], ['jade']);
     gulp.watch(['_dev/_style/**/*.scss'], ['css']);
     gulp.watch(['_dev/_sprite/*.*'], ['sprite']);
-    gulp.watch(['_dev/_img/*.*'], ['img']);
+    gulp.watch(['_dev/_img/*.*'], ['images']);
+    gulp.watch(['_dev/_favicon/*.ico'], ['images']);
     gulp.watch(['_dev/_script/*.*'], ['js']);
     gulp.watch(['_dev/_template/**/*.jade'], ['vendor']);   // fail
 //    gulp.watch(['_dev/_style/**/*.scss', '_dev/css/*.*'], ['uncss']);       // fail

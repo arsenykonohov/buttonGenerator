@@ -1,11 +1,62 @@
+// elements stylized
 textarea, input {
     outline: none;
 }
 textarea{
     resize: none;
 }
+
+// content classes
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+.wrapper__coll {
+    width: 50%;
+    float: left;
+}
+.wrapper__title {
+    margin: 0;
+}
+.wrapper__description {
+    
+}
+.adjust {
+    background: #ddd;
+    padding: 10px 20px 0 20px;
+}
+.adjust__title {
+    color: #444;
+    display: inline-block;
+}
+.adjust__input {
+    background: transparent;
+    text-align: right;
+    border: none;
+    color: #222;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 5px;
+    width: 80px;
+}
+.color {
+    border: 1px solid #777;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    width: 100px;
+}
+
+.result {
+    
+}
 .result__row {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
+}
+.result__row_button {
+    text-align: center;
+    min-height: 210px;
 }
 .button {
     background: green;
@@ -15,37 +66,12 @@ textarea{
     border-style: solid;
 }
 .result__item {
-    min-width: 400px;
+    width: 100%;
 }
 .html {
     min-height: 40px;
 }
 .css {
-    min-height: 200px;
-}
-// content
-.wrapper__coll {
-    width: 50%;
-    float: left;
-}
-.adjust {
-    padding: 15px 20px 0 20px;
-}
-.adjust__title {
-    color: #444;
-    display: inline-block;
-}
-.adjust__input {
-    text-align: center;
-    background: gold;
-    border: 1px dotted #333;
-    color: #222;
-    display: inline-block;
-    font-size: 20px;
-    margin-left: 5px;
-    width: 60px;
+    min-height: 335px;
 }
 
-.wrapper__title {
-    margin: 0;
-}

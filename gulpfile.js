@@ -37,7 +37,7 @@ gulp.task('connect', function () {
 
 
 
-// jade compile to html 
+// jade
 gulp.task('jade', function () {
     var YOUR_LOCALS = {};
     gulp.src('_dev/_template/page/*.jade')
@@ -72,7 +72,7 @@ gulp.task('uncss', function () {
     return gulp.src('_dev/css/*.css')
         .pipe(uncss({
             html: ['_dev/index.html']
-        }))                         // uncss - clean your css
+        }))
         .pipe(concat('main.css'))
         .pipe(gulp.dest('app/css'))
         .pipe(minifyCSS())
@@ -81,14 +81,14 @@ gulp.task('uncss', function () {
         .pipe(connect.reload())
         .pipe(notify('CSS was CLEAN & MIN'));
 });
-gulp.task('css', function (cb) {
+gulp.task('css-build', function (cb) {
     runSequence('sass', 'plugin-css', 'uncss', cb);
 });
 
 
 
 
-// sprite generator & image optimizer 
+// sprite, image, favicon
 gulp.task('sprite', function () {
     var spriteData = gulp.src('_dev/_sprite/*.png')   // путь, откуда берем картинки для спрайта
         .pipe(spritesmith({
@@ -104,7 +104,6 @@ gulp.task('sprite', function () {
         .pipe(connect.reload())
         .pipe(notify('img OPTIMIZED'));
 });
-// move imgs for project
 gulp.task('img', function () {
     gulp.src('_dev/_img/*.*')
         .pipe(gulp.dest('app/img/'))
@@ -124,21 +123,38 @@ gulp.task('images', function (cb) {
 
 
 // javascript 
-gulp.task('js', function () {
-    gulp.src('_dev/_script/**/*.js')
+gulp.task('module-js', function () {
+    gulp.src('_dev/_script/module/*.js')
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js/'))
         .pipe(uglify())
         .pipe(rename("main.min.js"))
         .pipe(gulp.dest('app/js/'))
         .pipe(connect.reload())
-        .pipe(notify('JS'));
+        .pipe(notify('module JS'));
+});
+//gulp.task('plugin-js', function () {
+//    gulp.src('_dev/_script/plugins/**/*.js')
+//        .pipe(concat('plugin.js'))
+//        .pipe(gulp.dest('app/js/plugin/'))
+//        .pipe(uglify())
+//        .pipe(rename("plugin.min.js"))
+//        .pipe(gulp.dest('app/js/plugin/'))
+//        .pipe(connect.reload())
+//        .pipe(notify('plugin JS'));
+//});
+gulp.task('dest-plugin', function () {
+    gulp.src('_dev/_script/plugins/**/*.**')
+        .pipe(gulp.dest('app/'))
+        .pipe(notify('dest-plugin-scripts'));
+});
+gulp.task('scripts', function (cb) {
+    runSequence('module-js', 'dest-plugin', cb);
 });
 
 
 
-
-// vendor build
+// vendor
 gulp.task('rimraf', function () {
     return gulp.src('./app/*.html')
         .pipe(rimraf())
@@ -164,7 +180,6 @@ gulp.task('useref', function () {
         .pipe(connect.reload())
         .pipe(notify('VENDOR'));
 });
-// vendor build here
 gulp.task('vendor', function (cb) {
     runSequence('rimraf', 'bower', 'useref', cb);
 });
@@ -174,7 +189,7 @@ gulp.task('vendor', function (cb) {
 
 // general build
 gulp.task('build', function (cb) {
-    runSequence(['jade', 'sass', 'js'], 'images', cb);
+    runSequence(['jade', 'sass'], 'scripts', 'images', cb);
 });
 
 
@@ -183,16 +198,19 @@ gulp.task('build', function (cb) {
 //// watch
 gulp.task('watch', function () {
     gulp.watch(['_dev/_template/**/*.jade'], ['jade']);
-    gulp.watch(['_dev/_style/**/*.scss'], ['css']);
+    
+    gulp.watch(['_dev/_style/**/*.scss'], ['css-build']);
+    
     gulp.watch(['_dev/_sprite/*.*'], ['sprite']);
-    gulp.watch(['_dev/_img/*.*'], ['images']);
-    gulp.watch(['_dev/_favicon/*.ico'], ['images']);
-    gulp.watch(['_dev/_script/*.*'], ['js']);
-    gulp.watch(['_dev/_template/**/*.jade'], ['vendor']);   // fail
-//    gulp.watch(['_dev/_style/**/*.scss', '_dev/css/*.*'], ['uncss']);       // fail
+    gulp.watch(['_dev/_img/*.*'], ['img']);
+    gulp.watch(['_dev/_favicon/*.ico'], ['favicon']);
+    
+    gulp.watch(['_dev/_script/**/*.js'], ['scripts']);
+    
+    gulp.watch(['_dev/_template/**/*.jade'], ['vendor']);
 });
 
 
 
 
-gulp.task('default', ['build', 'connect', 'watch']); // working directory
+gulp.task('default', ['build', 'connect', 'watch']);

@@ -81,7 +81,7 @@ gulp.task('uncss', function () {
         .pipe(connect.reload())
         .pipe(notify('CSS was CLEAN & MIN'));
 });
-gulp.task('css', function (cb) {
+gulp.task('css-build', function (cb) {
     runSequence('sass', 'plugin-css', 'uncss', cb);
 });
 
@@ -136,10 +136,10 @@ gulp.task('module-js', function () {
 gulp.task('plugin-js', function () {
     gulp.src('_dev/_script/plugins/**/*.js')
         .pipe(concat('plugin.js'))
-        .pipe(gulp.dest('app/js/'))
+        .pipe(gulp.dest('app/js/plugin/'))
         .pipe(uglify())
         .pipe(rename("plugin.min.js"))
-        .pipe(gulp.dest('app/js/plugin'))
+        .pipe(gulp.dest('app/js/plugin/'))
         .pipe(connect.reload())
         .pipe(notify('plugin JS'));
 });
@@ -198,11 +198,15 @@ gulp.task('build', function (cb) {
 //// watch
 gulp.task('watch', function () {
     gulp.watch(['_dev/_template/**/*.jade'], ['jade']);
-    gulp.watch(['_dev/_style/**/*.scss'], ['css']);
+    
+    gulp.watch(['_dev/_style/**/*.scss'], ['css-build']);
+    
     gulp.watch(['_dev/_sprite/*.*'], ['sprite']);
-    gulp.watch(['_dev/_img/*.*'], ['images']);
-    gulp.watch(['_dev/_favicon/*.ico'], ['images']);
-    gulp.watch(['_dev/_script/*.*'], ['js']);
+    gulp.watch(['_dev/_img/*.*'], ['img']);
+    gulp.watch(['_dev/_favicon/*.ico'], ['favicon']);
+    
+    gulp.watch(['_dev/_script/**/*.js'], ['scripts']);
+    
     gulp.watch(['_dev/_template/**/*.jade'], ['vendor']);
 });
 

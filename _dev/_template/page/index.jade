@@ -10,15 +10,6 @@ block content
         p.wrapper__description This is a my first JS project
         
         section.wrapper__coll
-            .result
-                .result__row
-                    .button button 
-                .result__row
-                    textarea.result__item.html
-                .result__row
-                    textarea.result__item.css
-                    
-        section.wrapper__coll
             // button width
             .adjust.btnwidth
                 .adjust__item
@@ -59,17 +50,34 @@ block content
                 .adjust__item
                     .btnradius__slider
                     
-            // button border color
-            .adjust.bordercolor
+            // button text color
+            .adjust.colortext
                 .adjust__item
-                    h3.adjust__title Change border color
+                    h3.adjust__title Change text color
                 .adjust__item
-                    input.bordercolor__change.color
+                    input.colortext__change.color(value="3A8723")
                     
             // button background color
             .adjust.bgcolor
                 .adjust__item
                     h3.adjust__title Change background color
                 .adjust__item
-                    input.bgcolor__change.color
-
+                    input.bgcolor__change.color(value="EEEEEE")
+                    
+            // button border color
+            .adjust.bordercolor
+                .adjust__item
+                    h3.adjust__title Change border color
+                .adjust__item
+                    input.bordercolor__change.color(value="B31919")
+                    
+                    
+        section.wrapper__coll
+            .result
+                .result__row
+                    .button button 
+                .result__row
+                    textarea.result__item.html
+                .result__row
+                    textarea.result__item.css
+                    

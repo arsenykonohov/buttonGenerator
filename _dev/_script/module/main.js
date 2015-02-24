@@ -16,7 +16,16 @@ var console,
         btnBorderWIdth = $(".borderwidth__slider"),
         btnBorderWIdthVal = $(".borderwidth__val"),
         btnBorderRadius = $(".btnradius__slider"),
-        btnBorderRadiusVal = $(".btnradius__val");
+        btnBorderRadiusVal = $(".btnradius__val"),
+        
+        inputTextColor = $(".colortext__change"),
+        newTextColor,
+        
+        inputBgColor = $(".bgcolor__change"),
+        newBgColor,
+        
+        inputBorderColor = $(".bordercolor__change"),
+        newBorderColor;
         
     buttonGenerator = {
 // ===================== change width ========================
@@ -156,9 +165,53 @@ var console,
                     "border-radius":         btnBorderRadius.slider("value")
                 });
             })
+        },
+// ===================== change text-color ========================
+        colorText: {
+            // Current color of element
+            currentTextColor: btn.css({
+                "color": "#" + inputTextColor.val()
+            }),
+            
+            // Change text color
+            textColorChange: inputTextColor.on("change", function () {
+                newTextColor = $(this).val();
+                btn.css({
+                    "color": "#" + newTextColor
+                });
+            })
+        },
+// ===================== change background-color ========================
+        bgColor: {
+            // Current color of element
+            currentBgColor: btn.css({
+                "background-color": "#" + inputBgColor.val()
+            }),
+            
+            // Change text color
+            bgColorChange: inputBgColor.on("change", function () {
+                newBgColor = $(this).val();
+                btn.css({
+                    "background-color": "#" + newBgColor
+                });
+            })
+        },
+// ===================== change border-color ========================
+        borderColor: {
+            // Current color of element
+            currentBorderColor: btn.css({
+                "border-color": "#" + inputBorderColor.val()
+            }),
+            
+            // Change text color
+            BorderColorChange: inputBorderColor.on("change", function () {
+                newBorderColor = $(this).val();
+                btn.css({
+                    "border-color": "#" + newBorderColor
+                });
+            })
         }
     };
-    
     
 }(jQuery));
 

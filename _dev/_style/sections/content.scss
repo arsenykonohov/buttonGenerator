@@ -3,12 +3,14 @@
 
 
 .page__line_content {
-    background: #aaa;
+    background: url("../img/bg.png");
     margin: -1*($headerHeight) 0 -1*($footerHeight) 0;
     min-height: 100%;
     padding: $headerHeight 0 $footerHeight 0;
     z-index: 1;
 }
+
+
 // elements stylized
 textarea, input {
     outline: none;
@@ -17,31 +19,30 @@ textarea{
     resize: none;
 }
 
-// content classes
 
+// content classes
 .wrapper__coll {
     width: 50%;
     float: left;
 }
-.wrapper__title {
-    margin: 0;
-}
 .wrapper__description {
-    
+    color: #bcab92;
+    padding: 10px;
+    text-align: center;
 }
 .adjust {
-    background: #ddd;
+    background: #333;
     padding: 10px 20px 0 20px;
 }
 .adjust__title {
-    color: #444;
+    color: #ddd;
     display: inline-block;
 }
 .adjust__input {
     background: transparent;
     text-align: right;
     border: none;
-    color: #222;
+    color: #fff;
     display: inline-block;
     font-size: 20px;
     margin-left: 5px;
@@ -56,6 +57,7 @@ textarea{
     width: 100px;
 }
 
+// result filds
 .result {
     
 }

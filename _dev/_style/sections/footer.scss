@@ -1,8 +1,8 @@
 @import "../mixins/mixins";
 
 .page__line_footer {
-    background: #333;
+    background: gold;
+    border-top: 3px solid #777;
     height: $footerHeight;
     z-index: 2;
 }
-

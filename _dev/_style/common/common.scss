@@ -30,7 +30,9 @@ p,ul,li, {
     @include clearfix;
 }
 .wrapper {
+    height: 100%;
     margin: 0 auto;
+    position: relative;
     width: 1000px;
 }
 

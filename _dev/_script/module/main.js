@@ -28,6 +28,12 @@ var console,
         newBorderColor;
         
     buttonGenerator = {
+// ===============================================================
+// SetUpListener - callback function describe here
+// ===============================================================
+
+        
+        
 // ===================== change width ========================
         width: {
             // slider init

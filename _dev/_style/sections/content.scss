@@ -1,3 +1,14 @@
+@import "../mixins/mixins";
+
+
+
+.page__line_content {
+    background: #aaa;
+    margin: -1*($headerHeight) 0 -1*($footerHeight) 0;
+    min-height: 100%;
+    padding: $headerHeight 0 $footerHeight 0;
+    z-index: 1;
+}
 // elements stylized
 textarea, input {
     outline: none;
@@ -7,10 +18,7 @@ textarea{
 }
 
 // content classes
-.wrapper {
-    margin: 0 auto;
-    width: 1000px;
-}
+
 .wrapper__coll {
     width: 50%;
     float: left;

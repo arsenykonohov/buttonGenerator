@@ -1,0 +1,51 @@
+@import "../mixins/mixins";
+
+
+
+.page__line_header {
+    background: gold;
+    height: $headerHeight;
+    z-index: 2;
+}
+
+
+.logo {
+    float: left;
+    background: black;
+}
+.logo__img {
+    background: blue;
+}
+.logo__text {
+    color: red;
+}
+.social {
+    float: right;
+}
+.social__list {
+    padding: 5px 0 0 0;
+}
+.social__item {
+    display: inline-block;
+}
+.social__link {
+    border: 3px solid #fff;
+    background: $sliderBody;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    text-indent: 999999px;
+    height: $socialHeight;
+    width: $socialHeight;
+    @include heandleRadius(50%);
+}
+
+
+
+
+
+.social__text {
+    display: inline;
+    color: #fff;
+    line-height: $socialHeight;
+}

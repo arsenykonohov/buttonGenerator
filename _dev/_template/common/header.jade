@@ -4,7 +4,8 @@
         .logo__text
     .social
         ul.social__list
-            each item, val in {fb:'facebook.com', vk:'vk.com'}
+            each item, val in {fb:'http://facebook.com', vk:'http://vk.com/'}
                 li.social__item
                     a.social__link(href=item class="social__link_"+val)
                         span.social__text= val
+                        

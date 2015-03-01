@@ -1,0 +1,8 @@
+@import "../mixins/mixins";
+
+.page__line_footer {
+    background: #333;
+    height: $footerHeight;
+    z-index: 2;
+}
+

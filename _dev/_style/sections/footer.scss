@@ -19,15 +19,26 @@
 .form__input {
     color: #333;
     height: 32px;
-    padding: 0 0 0 5px;
+    margin: 0 10px;
+    padding: 0 5px;
+    position: relative;
     @include heandleRadius(4px);
+    
 }
 .mail {
-    
+    border: 1px solid #54c165;
+    width: 200px;
 }
 .send {
-    
+    background: #8df09c;
+    border: none;
+    width: 140px;
+    &:hover {
+        top: -2px;
+        border-bottom: 2px solid #469f53;
+    }
+    &:active {
+        background: #68b774;
+        border: none;
+    }
 }
-
-
-

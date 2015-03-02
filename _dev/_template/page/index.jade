@@ -5,7 +5,8 @@ block title
 
 block content
     .wrapper
-        p.wrapper__description This is a my first JS project
+        .description
+            p.description__text This is a my first JS project
         section.wrapper__coll
             // button width
             .adjust.btnwidth
@@ -50,22 +51,19 @@ block content
             // button text color
             .adjust.colortext
                 .adjust__item
-                    .adjust__input
-                        input.colortext__change.color(value="B8FAFF")
+                    input.colortext__change.color(value="B8FAFF")
                     h3.adjust__title Change text color
                     
             // button background color
             .adjust.bgcolor
                 .adjust__item
-                    .adjust__input
-                        input.bgcolor__change.color(value="657ECF")
+                    input.bgcolor__change.color(value="657ECF")
                     h3.adjust__title Change BG color
                         
             // button border color
             .adjust.bordercolor
                 .adjust__item
-                    .adjust__input
-                        input.bordercolor__change.color(value="FF199C")
+                    input.bordercolor__change.color(value="FF199C")
                     h3.adjust__title Change border color
                         
         section.wrapper__coll

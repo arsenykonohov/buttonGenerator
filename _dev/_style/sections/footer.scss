@@ -7,5 +7,27 @@
     z-index: 2;
 }
 
+.form {
+    display: block;
+    height: 100%;
+    text-align: center;
+}
+.form__item {
+    display: inline-block;
+    line-height: $footerHeight;
+}
+.form__input {
+    color: #333;
+    height: 32px;
+    padding: 0 0 0 5px;
+    @include heandleRadius(4px);
+}
+.mail {
+    
+}
+.send {
+    
+}
+
 
 

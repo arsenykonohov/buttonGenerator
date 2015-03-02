@@ -143,7 +143,7 @@ var console,
             // slider init
             borderRadiusSlider: btnBorderRadius.slider({
                 range: "min",
-                value: 10,
+                value: 30,
                 min: 0,
                 max: 100,
                 slide: function (event, ui) {

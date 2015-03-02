@@ -28,16 +28,15 @@
   margin-bottom: -.5em; 
     }
 .ui-widget-content .ui-state-default {
-  border: 3px solid #fff;
-//  background: transparent;
-  background: $sliderBody;
+  border: 3px solid $sliderBody;
+  background: $sliderHendleBorder;
   font-weight: normal;
-  color: #555555; 
   outline: none; }
+
 // active hendler
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-  border: 3px solid $sliderBody;
-  background: #fff; }
+  border: 3px solid $sliderHendleBorder;
+  background: $sliderBody; }
 // HZ ?????
 .ui-sortable-handle {
   -ms-touch-action: none;
@@ -65,7 +64,5 @@
   font-size: 1em; }
 .ui-widget-content {
   border: 1px solid $sliderBody;
-  background: #fff; }
-
-
+  background: $sliderHendleBorder; }
 

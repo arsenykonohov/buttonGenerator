@@ -2,6 +2,7 @@
 
 
 
+
 .page__line_content {
     background: url("../img/bg.png");
     margin: -1*($headerHeight) 0 -1*($footerHeight) 0;
@@ -26,12 +27,12 @@ textarea{
     float: left;
 }
 .wrapper__description {
-    color: #bcab92;
-    padding: 10px;
+    color: #aaa;
+    padding: 15px;
     text-align: center;
 }
 .adjust {
-    background: #333;
+    background: #1b1b1b;
     padding: 10px 20px 0 20px;
 }
 .adjust__title {
@@ -49,13 +50,14 @@ textarea{
     width: 80px;
 }
 .color {
-    border: 1px solid #777;
+    border: 2px solid $sliderBody;
     display: inline-block;
     font-size: 16px;
     line-height: 30px;
     text-align: center;
     width: 100px;
 }
+
 
 // result filds
 .result {
@@ -76,6 +78,7 @@ textarea{
     border-style: solid;
 }
 .result__item {
+    background: #eee;
     width: 100%;
 }
 .html {

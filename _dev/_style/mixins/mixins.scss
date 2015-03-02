@@ -1,7 +1,8 @@
 $sliderBody: #e37e7e;
+$sliderHendleBorder: #ddd;
 $socialHeight: 48px;
-$headerHeight: 60px;
-$footerHeight: 40px;
+$headerHeight: 68px;
+$footerHeight: 60px;
 
 
 @mixin heandleRadius($radius) {
@@ -10,6 +11,7 @@ $footerHeight: 40px;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
 
 @mixin clearfix {
     zoom:1;

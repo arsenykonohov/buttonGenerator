@@ -2,9 +2,13 @@
     .logo
         .logo__img
         .logo__text
+    .description
+        h1.description__text Button Generator
     .social
         ul.social__list
-            each item, val in {fb:'facebook.com', vk:'vk.com'}
+            each item, val in {fb:'http://facebook.com', vk:'http://vk.com/', github:'http://github.com/'}
                 li.social__item
                     a.social__link(href=item class="social__link_"+val)
                         span.social__text= val
+
+

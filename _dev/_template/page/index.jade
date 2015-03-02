@@ -5,9 +5,7 @@ block title
 
 block content
     .wrapper
-        h1.wrapper__title button Generator
         p.wrapper__description This is a my first JS project
-        
         section.wrapper__coll
             // button width
             .adjust.btnwidth
@@ -53,24 +51,27 @@ block content
             .adjust.colortext
                 .adjust__item
                     h3.adjust__title Change text color
-                    input.colortext__change.color(value="3A8723")
+                    .adjust__input
+                        input.colortext__change.color(value="B8FAFF")
                     
             // button background color
             .adjust.bgcolor
                 .adjust__item
                     h3.adjust__title Change background color
-                    input.bgcolor__change.color(value="EEEEEE")
-                    
+                    .adjust__input
+                        input.bgcolor__change.color(value="657ECF")
+                        
             // button border color
             .adjust.bordercolor
                 .adjust__item
                     h3.adjust__title Change border color
-                    input.bordercolor__change.color(value="B31919")
-                    
-                    
+                    .adjust__input
+                        input.bordercolor__change.color(value="FF199C")
+                        
+                        
         section.wrapper__coll
             .result
-                .result__row
+                .result__row.result__row_button
                     .button button 
                 .result__row
                     textarea.result__item.html

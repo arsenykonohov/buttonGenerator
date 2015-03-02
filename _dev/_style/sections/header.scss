@@ -1,0 +1,75 @@
+@import "../mixins/mixins";
+
+
+.page__line_header {
+    background: #555;
+    box-shadow: 0px 0px 6px 3px #0f0;
+    height: $headerHeight;
+    text-align: center;
+    z-index: 2;
+}
+
+
+// logo
+.logo {
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.logo__img {
+    background: blue;
+}
+.logo__text {
+    color: red;
+}
+
+// description
+.description {
+    display: inline-block;
+}
+.description__text {
+    margin: 0;
+    padding: 0;
+    color: gold;
+    font: bold 30px sans-serif;
+    line-height: $headerHeight;
+    text-shadow: 0px 1px 0px #000;
+}
+
+
+// social icons
+.social {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.social__list {
+    padding: 10px 0 0 0;
+}
+.social__item {
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
+.social__link {
+    border: 1px solid #004100;
+    background: #333;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    text-indent: 999999px;
+    height: $socialHeight;
+    width: $socialHeight;
+    @include heandleRadius(50%);
+    &:hover {
+        box-shadow: 0px 0px 5px 2px #0f0;
+    }
+}
+.social__text {
+    display: inline;
+    color: #fff;
+    line-height: $socialHeight;
+}
+
+

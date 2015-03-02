@@ -29,7 +29,6 @@
 }
 
 
-
 .adjust {
     background: #1b1b1b;
     padding: 15px 20px;
@@ -47,10 +46,14 @@
     background: transparent;
     text-align: right;
     border: none;
-    color: #fff;
+    color: $inputColor;
     display: inline-block;
-    font-size: 16px;
+    font-size: $inputFontSize;
     width: $adjustInput;
+}
+.adjust__text {
+    color: $inputColor;
+    font-size: $inputFontSize;
 }
 .color {
     border: 2px solid $sliderBody;
@@ -90,5 +93,3 @@
 .css {
     min-height: 315px;
 }
-
-

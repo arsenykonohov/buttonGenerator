@@ -3,7 +3,7 @@ $sliderHendleBorder: #ddd;
 $socialHeight: 48px;
 $headerHeight: 68px;
 $footerHeight: 60px;
-
+$adjustInput: 100px;
 
 @mixin heandleRadius($radius) {
   -webkit-border-radius: $radius;

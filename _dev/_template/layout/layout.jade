@@ -32,13 +32,13 @@ html
         <![endif]-->
         .page
             // HEADER
-            header.page__line
+            header.page__line.page__line_header
                 include ../common/header.jade
             // CONTENT
-            .page__line
+            .page__line.page__line_content
                 block content
             // FOOTER 
-            footer.page__line
+            footer.page__line.page__line_footer
                 include ../common/footer.jade
         // bower scripts
         // build:js(_dev) js/vendor/vendor.js
@@ -48,3 +48,4 @@ html
         // main js scripts
         script(src="js/main.js")
         script(src="jscolor/jscolor.js")
+        

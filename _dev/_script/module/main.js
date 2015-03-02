@@ -101,7 +101,7 @@ var console,
                 }
             }),
             // input changed slider value
-            inputVal: btnFontSizeVal.val(btnFontSize.slider("value") + "px"),
+            inputVal: btnFontSizeVal.val(btnFontSize.slider("value")),
             // width of element
             currentSize: btn.css({
                 "font-size" : btnFontSize.slider("value")
@@ -126,7 +126,7 @@ var console,
                 }
             }),
             // input changed slider value
-            inputVal: btnBorderWIdthVal.val(btnBorderWIdth.slider("value") + "px"),
+            inputVal: btnBorderWIdthVal.val(btnBorderWIdth.slider("value")),
             // width of element
             currentSize: btn.css({
                 "border-width" : btnBorderWIdth.slider("value")
@@ -151,7 +151,7 @@ var console,
                 }
             }),
             // input changed slider value
-            borderRadiusVal: btnBorderRadiusVal.val(btnBorderRadius.slider("value") + "px"),
+            borderRadiusVal: btnBorderRadiusVal.val(btnBorderRadius.slider("value")),
             // width of element
             currentBorderRadius: btn.css({
                 "-webkit-border-radius": btnBorderRadius.slider("value"),

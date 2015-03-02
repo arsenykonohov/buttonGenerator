@@ -28,6 +28,11 @@ var console,
         newBorderColor;
         
     buttonGenerator = {
+// ===============================================================
+// SetUpListener - callback function describe here
+// ===============================================================
+
+
 // ===================== change width ========================
         width: {
             // slider init
@@ -88,7 +93,7 @@ var console,
             // slider init
             slider: btnFontSize.slider({
                 range: "min",
-                value: 16,
+                value: 24,
                 min: 8,
                 max: 41,
                 slide: function (event, ui) {
@@ -113,8 +118,8 @@ var console,
             // slider init
             slider: btnBorderWIdth.slider({
                 range: "min",
-                value: 3,
-                min: 0,
+                value: 10,
+                min: 1,
                 max: 30,
                 slide: function (event, ui) {
                     btnBorderWIdthVal.val(ui.value);
@@ -138,7 +143,7 @@ var console,
             // slider init
             borderRadiusSlider: btnBorderRadius.slider({
                 range: "min",
-                value: 10,
+                value: 30,
                 min: 0,
                 max: 100,
                 slide: function (event, ui) {

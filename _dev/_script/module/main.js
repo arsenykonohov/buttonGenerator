@@ -25,9 +25,16 @@ var console,
         newBgColor,
         
         inputBorderColor = $(".bordercolor__change"),
-        newBorderColor;
+        newBorderColor,
         
+        codeResultAreaCss = $(".css"),
+        codeResultAreaHtml = $(".html");
+    
     buttonGenerator = {
+// ===============================================================
+// INITIALIZE push project
+// ===============================================================
+
 // ===============================================================
 // SetUpListener - callback function describe here
 // ===============================================================
@@ -58,6 +65,7 @@ var console,
                     "padding-left" : btnWidth.slider("value"),
                     "padding-right" : btnWidth.slider("value")
                 });
+                buttonGenerator.changeCodeResultArea();
             })
         },
 // ===================== change height ========================
@@ -86,6 +94,7 @@ var console,
                     "padding-top" : btnHeight.slider("value"),
                     "padding-bottom" : btnHeight.slider("value")
                 });
+                buttonGenerator.changeCodeResultArea();
             })
         },
 // ===================== change font-size ========================
@@ -101,7 +110,7 @@ var console,
                 }
             }),
             // input changed slider value
-            inputVal: btnFontSizeVal.val(btnFontSize.slider("value") + "px"),
+            inputVal: btnFontSizeVal.val(btnFontSize.slider("value")),
             // width of element
             currentSize: btn.css({
                 "font-size" : btnFontSize.slider("value")
@@ -111,6 +120,7 @@ var console,
                 btn.css({
                     "font-size" : btnFontSize.slider("value")
                 });
+                buttonGenerator.changeCodeResultArea();
             })
         },
 // ===================== change border width ========================
@@ -126,7 +136,7 @@ var console,
                 }
             }),
             // input changed slider value
-            inputVal: btnBorderWIdthVal.val(btnBorderWIdth.slider("value") + "px"),
+            inputVal: btnBorderWIdthVal.val(btnBorderWIdth.slider("value")),
             // width of element
             currentSize: btn.css({
                 "border-width" : btnBorderWIdth.slider("value")
@@ -136,6 +146,7 @@ var console,
                 btn.css({
                     "border-width" : btnBorderWIdth.slider("value")
                 });
+                buttonGenerator.changeCodeResultArea();
             })
         },
 // ===================== change border-radius ========================
@@ -151,7 +162,7 @@ var console,
                 }
             }),
             // input changed slider value
-            borderRadiusVal: btnBorderRadiusVal.val(btnBorderRadius.slider("value") + "px"),
+            borderRadiusVal: btnBorderRadiusVal.val(btnBorderRadius.slider("value")),
             // width of element
             currentBorderRadius: btn.css({
                 "-webkit-border-radius": btnBorderRadius.slider("value"),
@@ -169,6 +180,7 @@ var console,
                     "-o-border-radius":      btnBorderRadius.slider("value"),
                     "border-radius":         btnBorderRadius.slider("value")
                 });
+                buttonGenerator.changeCodeResultArea();
             })
         },
 // ===================== change text-color ========================
@@ -184,6 +196,7 @@ var console,
                 btn.css({
                     "color": "#" + newTextColor
                 });
+                buttonGenerator.changeCodeResultArea();
             })
         },
 // ===================== change background-color ========================
@@ -199,6 +212,7 @@ var console,
                 btn.css({
                     "background-color": "#" + newBgColor
                 });
+                buttonGenerator.changeCodeResultArea();
             })
         },
 // ===================== change border-color ========================
@@ -214,10 +228,44 @@ var console,
                 btn.css({
                     "border-color": "#" + newBorderColor
                 });
+                buttonGenerator.changeCodeResultArea();
             })
+        },
+// ===================== code result method ========================
+        changeCodeResultArea: function () {
+            var getBtnWidthL = btn.css("padding-left"),
+                getBtnWidthR = btn.css("padding-right"),
+                getBtnHeightT = btn.css("padding-top"),
+                getBtnHeightB = btn.css("padding-bottom"),
+                getBtnFontSize = btn.css("font-size"),
+                getBtnBrdrWidth = btn.css("border-width"),
+                getBtnBrdrRadius = btn.css("border-radius"),
+                getColorText = btn.css("color"),
+                getBackgroundColor = btn.css("background-color"),
+                getBorderColor = btn.css("border-color");
+                
+            codeResultAreaCss.text(
+                ".button {" + "\n" +
+                    "    padding-left: " + getBtnWidthL + ";\n" +
+                    "    padding-right: " + getBtnWidthR + ";\n" +
+                    "    padding-top: " + getBtnHeightT + ";\n" +
+                    "    padding-bottom: " + getBtnHeightB + ";\n" +
+                    "    font-size: " + getBtnFontSize + ";\n" +
+                    "    border-width: " + getBtnBrdrWidth + ";\n" +
+                    "    -webkit-border-radius: " + getBtnBrdrRadius + ";\n" +
+                    "    -moz-border-radius: " + getBtnBrdrRadius + ";\n" +
+                    "    -ms-border-radius: " + getBtnBrdrRadius + ";\n" +
+                    "    -o-border-radius: " + getBtnBrdrRadius + ";\n" +
+                    "    border-radius: " + getBtnBrdrRadius + ";\n" +
+                    "    color: " + getColorText + ";\n" +
+                    "    background-color: " + getBackgroundColor + ";\n" +
+                    "    border-color: " + getBorderColor + ";\n" +
+                    "}"
+            );
+            codeResultAreaHtml.text('<div class="button">button</div>');
         }
     };
-    
+    buttonGenerator.changeCodeResultArea();
 }(jQuery));
 
 

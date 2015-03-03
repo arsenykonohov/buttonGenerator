@@ -1,8 +1,6 @@
 @import "../mixins/mixins";
 
 
-
-
 .page__line_content {
     background: url("../img/bg.png");
     margin: -1*($headerHeight) 0 -1*($footerHeight) 0;
@@ -27,7 +25,6 @@
     display: inline-block;
     padding: 5px 20px;
 }
-
 
 .adjust {
     background: #1b1b1b;
@@ -88,8 +85,9 @@
     width: 100%;
 }
 .html {
-    min-height: 40px;
+    padding: 20px 5px 0 5px;
 }
 .css {
-    min-height: 315px;
+    min-height: 300px;
+    padding: 5px;
 }

@@ -46,7 +46,7 @@ var console,
             btnWidthSlider: btnWidth.slider({
                 range: "min",
                 value: 20,
-                min: 1,
+                min: 0,
                 max: 100,
                 slide: function (event, ui) {
                     btnWidthVal.val(ui.value);
@@ -60,7 +60,7 @@ var console,
                 "padding-right" : btnWidth.slider("value")
             }),
             // event
-            changeBtnWidth: btnWidth.on("slide", function (event, ui) {
+            changeBtnWidth: btnWidth.on("slide slidechange", function (event, ui) {
                 btn.css({
                     "padding-left" : btnWidth.slider("value"),
                     "padding-right" : btnWidth.slider("value")
@@ -89,7 +89,7 @@ var console,
                 "padding-bottom" : btnHeight.slider("value")
             }),
             // event
-            changeBtnHeight: btnHeight.on("slide", function (event, ui) {
+            changeBtnHeight: btnHeight.on("slide slidechange", function (event, ui) {
                 btn.css({
                     "padding-top" : btnHeight.slider("value"),
                     "padding-bottom" : btnHeight.slider("value")
@@ -116,7 +116,7 @@ var console,
                 "font-size" : btnFontSize.slider("value")
             }),
             // event
-            inputChange: btnFontSize.on("slide", function (event, ui) {
+            inputChange: btnFontSize.on("slide slidechange", function (event, ui) {
                 btn.css({
                     "font-size" : btnFontSize.slider("value")
                 });
@@ -142,7 +142,7 @@ var console,
                 "border-width" : btnBorderWIdth.slider("value")
             }),
             // event
-            inputChange: btnBorderWIdth.on("slide", function (event, ui) {
+            inputChange: btnBorderWIdth.on("slide slidechange", function (event, ui) {
                 btn.css({
                     "border-width" : btnBorderWIdth.slider("value")
                 });
@@ -172,7 +172,7 @@ var console,
                 "border-radius":         btnBorderRadius.slider("value")
             }),
             // event
-            changeBorderRadius: btnBorderRadius.on("slide", function (event, ui) {
+            changeBorderRadius: btnBorderRadius.on("slide slidechange", function (event, ui) {
                 btn.css({
                     "-webkit-border-radius": btnBorderRadius.slider("value"),
                     "-moz-border-radius":    btnBorderRadius.slider("value"),

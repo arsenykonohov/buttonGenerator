@@ -45,9 +45,10 @@ var console,
             // slider init
             btnWidthSlider: btnWidth.slider({
                 range: "min",
-                value: 20,
+                value: 40,
                 min: 0,
-                max: 100,
+                max: 200,
+                step: 2,
                 slide: function (event, ui) {
                     btnWidthVal.val(ui.value);
                 }
@@ -56,14 +57,14 @@ var console,
             btnWidthVal: btnWidthVal.val(btnWidth.slider("value")),
             // width of element
             currentBtnWidth: btn.css({
-                "padding-left" : btnWidth.slider("value"),
-                "padding-right" : btnWidth.slider("value")
+                "padding-left" : btnWidth.slider("value") * 0.5,
+                "padding-right" : btnWidth.slider("value") * 0.5
             }),
             // event
             changeBtnWidth: btnWidth.on("slide slidechange", function (event, ui) {
                 btn.css({
-                    "padding-left" : btnWidth.slider("value"),
-                    "padding-right" : btnWidth.slider("value")
+                    "padding-left" : btnWidth.slider("value") * 0.5,
+                    "padding-right" : btnWidth.slider("value") * 0.5
                 });
                 buttonGenerator.changeCodeResultArea();
             })
@@ -73,9 +74,10 @@ var console,
             // slider init
             btnHeightSlider: btnHeight.slider({
                 range: "min",
-                value: 10,
-                min: 1,
-                max: 50,
+                value: 20,
+                min: 0,
+                max: 100,
+                step: 2,
                 slide: function (event, ui) {
                     btnHeightVal.val(ui.value);
                 }
@@ -85,14 +87,14 @@ var console,
             
             // width of element
             currentBtnHeight: btn.css({
-                "padding-top" : btnHeight.slider("value"),
-                "padding-bottom" : btnHeight.slider("value")
+                "padding-top" : btnHeight.slider("value") * 0.5,
+                "padding-bottom" : btnHeight.slider("value") * 0.5
             }),
             // event
             changeBtnHeight: btnHeight.on("slide slidechange", function (event, ui) {
                 btn.css({
-                    "padding-top" : btnHeight.slider("value"),
-                    "padding-bottom" : btnHeight.slider("value")
+                    "padding-top" : btnHeight.slider("value") * 0.5,
+                    "padding-bottom" : btnHeight.slider("value") * 0.5
                 });
                 buttonGenerator.changeCodeResultArea();
             })
@@ -128,9 +130,9 @@ var console,
             // slider init
             slider: btnBorderWIdth.slider({
                 range: "min",
-                value: 10,
-                min: 1,
-                max: 30,
+                value: 0,
+                min: 0,
+                max: 25,
                 slide: function (event, ui) {
                     btnBorderWIdthVal.val(ui.value);
                 }
@@ -154,7 +156,7 @@ var console,
             // slider init
             borderRadiusSlider: btnBorderRadius.slider({
                 range: "min",
-                value: 30,
+                value: 4,
                 min: 0,
                 max: 100,
                 slide: function (event, ui) {

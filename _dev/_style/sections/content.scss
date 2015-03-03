@@ -1,8 +1,6 @@
 @import "../mixins/mixins";
 
 
-
-
 .page__line_content {
     background: url("../img/bg.png");
     margin: -1*($headerHeight) 0 -1*($footerHeight) 0;
@@ -11,43 +9,48 @@
     z-index: 1;
 }
 
-
-// elements stylized
-textarea, input {
-    outline: none;
-}
-textarea{
-    resize: none;
-}
-
-
 // content classes
 .wrapper__coll {
     width: 50%;
     float: left;
+    text-align: left;
 }
-.wrapper__description {
+.description {
+    display: block;
+    padding: 20px 0 15px;
+}
+.description__text {
+    background: #1b1b1b;
     color: #aaa;
-    padding: 15px;
-    text-align: center;
+    display: inline-block;
+    padding: 5px 20px;
 }
+
 .adjust {
     background: #1b1b1b;
-    padding: 10px 20px 0 20px;
+    padding: 15px 20px;
+}
+.adjust__item {
+    padding: 0;
 }
 .adjust__title {
     color: #ddd;
     display: inline-block;
+    margin: 0;
+    padding: 0 0 15px 0;
 }
 .adjust__input {
     background: transparent;
     text-align: right;
     border: none;
-    color: #fff;
+    color: $inputColor;
     display: inline-block;
-    font-size: 20px;
-    margin-left: 5px;
-    width: 80px;
+    font-size: $inputFontSize;
+    width: $adjustInput;
+}
+.adjust__text {
+    color: $inputColor;
+    font-size: $inputFontSize;
 }
 .color {
     border: 2px solid $sliderBody;
@@ -55,7 +58,7 @@ textarea{
     font-size: 16px;
     line-height: 30px;
     text-align: center;
-    width: 100px;
+    width: $adjustInput;
 }
 
 
@@ -82,10 +85,9 @@ textarea{
     width: 100%;
 }
 .html {
-    min-height: 40px;
+    padding: 20px 5px 0 5px;
 }
 .css {
-    min-height: 315px;
+    min-height: 300px;
+    padding: 5px;
 }
-
-

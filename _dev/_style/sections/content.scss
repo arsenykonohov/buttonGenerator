@@ -5,7 +5,7 @@
     background: url("../img/bg.png");
     margin: -1*($headerHeight) 0 -1*($footerHeight) 0;
     min-height: 100%;
-    padding: $headerHeight 0 $footerHeight 0;
+    padding: $headerHeight 0 ($footerHeight)+25px 0;
     z-index: 1;
 }
 
@@ -35,19 +35,24 @@
 }
 .adjust__title {
     color: #ddd;
+    font: normal 21px sans-serif;
     display: inline-block;
     margin: 0;
     padding: 0 0 15px 0;
 }
 .adjust__input {
-    background: transparent;
-    text-align: right;
-    border: none;
-    color: $inputColor;
-    display: inline-block;
-    font-size: $inputFontSize;
-    width: $adjustInput;
+    float: right;
+    & input {
+        background: transparent;
+        text-align: right;
+        border: none;
+        color: $inputColor;
+        display: inline-block;
+        font-size: $inputFontSize;
+        width: $adjustInput;
+    }
 }
+
 .adjust__text {
     color: $inputColor;
     font-size: $inputFontSize;
@@ -57,10 +62,10 @@
     display: inline-block;
     font-size: 16px;
     line-height: 30px;
+    margin-right: 10px;
     text-align: center;
     width: $adjustInput;
 }
-
 
 // result filds
 .result {

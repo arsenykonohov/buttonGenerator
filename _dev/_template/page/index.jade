@@ -4,25 +4,27 @@ block title
     | btn-G
 
 block content
-    .wrapper
+    .wrapper.wrapper_content
         .description
             p.description__text This is a my first JS project
         section.wrapper__coll
             // button width
             .adjust.btnwidth
                 .adjust__item
-                    h3.adjust__title Change button width
-                    input.adjust__input.btnwidth__val(type="text")
-                    span.adjust__text px
+                    h3.adjust__title Change button width (text +)
+                    .adjust__input
+                        input.btnwidth__val(type="text")
+                        span.adjust__text px
                 .adjust__item
                     .btnwidth__slider
                         
             // button height
             .adjust.btnheight
                 .adjust__item
-                    h3.adjust__title Change button height
-                    input.adjust__input.btnheight__val(type="text")
-                    span.adjust__text px
+                    h3.adjust__title Change button height (text +)
+                    .adjust__input
+                        input.btnheight__val(type="text")
+                        span.adjust__text px
                 .adjust__item
                     .btnheith__slider
                         
@@ -30,8 +32,9 @@ block content
             .adjust.fontsize
                 .adjust__item
                     h3.adjust__title Change font-size
-                    input.adjust__input.fontsize__val(type="text")
-                    span.adjust__text px
+                    .adjust__input
+                        input.fontsize__val(type="text")
+                        span.adjust__text px
                 .adjust__item
                     .fontsize__slider
                         
@@ -39,8 +42,9 @@ block content
             .adjust.borderwidth
                 .adjust__item
                     h3.adjust__title Change border-width
-                    input.adjust__input.borderwidth__val(type="text")
-                    span.adjust__text px
+                    .adjust__input
+                        input.borderwidth__val(type="text")
+                        span.adjust__text px
                 .adjust__item
                     .borderwidth__slider
                         
@@ -48,8 +52,9 @@ block content
             .adjust.btnradius
                 .adjust__item
                     h3.adjust__title Change border-radius
-                    input.adjust__input.btnradius__val(type="text")
-                    span.adjust__text px
+                    .adjust__input
+                        input.btnradius__val(type="text")
+                        span.adjust__text px
                 .adjust__item
                     .btnradius__slider
                         
@@ -58,19 +63,19 @@ block content
             // button text color
             .adjust.colortext
                 .adjust__item
-                    input.colortext__change.color(value="B8FAFF")
+                    input.colortext__change.color(value="EEEEEE")
                     h3.adjust__title Change text color
                         
             // button background color
             .adjust.bgcolor
                 .adjust__item
-                    input.bgcolor__change.color(value="657ECF")
+                    input.bgcolor__change.color(value="446925")
                     h3.adjust__title Change BG color
                         
-            // button border color
+            // button border color 
             .adjust.bordercolor
                 .adjust__item
-                    input.bordercolor__change.color(value="FF199C")
+                    input.bordercolor__change.color(value="FFDB29")
                     h3.adjust__title Change border color
                         
         section.wrapper__coll

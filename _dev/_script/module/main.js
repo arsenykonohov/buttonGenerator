@@ -130,7 +130,7 @@ var console,
             // slider init
             slider: btnBorderWIdth.slider({
                 range: "min",
-                value: 0,
+                value: 5,
                 min: 0,
                 max: 25,
                 slide: function (event, ui) {
